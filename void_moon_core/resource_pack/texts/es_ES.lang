@@ -1,0 +1,16 @@
+pack.name=Void Moon Core
+pack.description=Reloj de días, permadeath y umbrales de dificultad
+item.voidmoon:lunar_star.name=Estrella Lunar
+item.voidmoon:lunar_star=Estrella Lunar
+item.voidmoon:void_moon_manager.name=Void Moon Manager
+item.voidmoon:void_moon_manager=Void Moon Manager
+item.voidmoon:life_heart.name=Corazón de Vida
+item.voidmoon:life_heart=Corazón de Vida
+item.voidmoon:blood_leather_helmet.name=Casco de cuero de sangre
+item.voidmoon:blood_leather_helmet=Casco de cuero de sangre
+item.voidmoon:blood_leather_chestplate.name=Peto de cuero de sangre
+item.voidmoon:blood_leather_chestplate=Peto de cuero de sangre
+item.voidmoon:blood_leather_leggings.name=Grebas de cuero de sangre
+item.voidmoon:blood_leather_leggings=Grebas de cuero de sangre
+item.voidmoon:blood_leather_boots.name=Botas de cuero de sangre
+item.voidmoon:blood_leather_boots=Botas de cuero de sangre

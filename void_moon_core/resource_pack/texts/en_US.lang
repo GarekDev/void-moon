@@ -1,0 +1,16 @@
+pack.name=Void Moon Core
+pack.description=Day clock, permadeath, and difficulty thresholds
+item.voidmoon:lunar_star.name=Lunar Star
+item.voidmoon:lunar_star=Lunar Star
+item.voidmoon:void_moon_manager.name=Void Moon Manager
+item.voidmoon:void_moon_manager=Void Moon Manager
+item.voidmoon:life_heart.name=Life Heart
+item.voidmoon:life_heart=Life Heart
+item.voidmoon:blood_leather_helmet.name=Blood Leather Cap
+item.voidmoon:blood_leather_helmet=Blood Leather Cap
+item.voidmoon:blood_leather_chestplate.name=Blood Leather Tunic
+item.voidmoon:blood_leather_chestplate=Blood Leather Tunic
+item.voidmoon:blood_leather_leggings.name=Blood Leather Pants
+item.voidmoon:blood_leather_leggings=Blood Leather Pants
+item.voidmoon:blood_leather_boots.name=Blood Leather Boots
+item.voidmoon:blood_leather_boots=Blood Leather Boots

@@ -1,0 +1,1075 @@
+{
+  "namespace": "vm_overlay",
+  "blood_frame_0": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      2,
+      2,
+      194,
+      194
+    ],
+    "to": [
+      2,
+      2,
+      194,
+      194
+    ],
+    "next": "@vm_overlay.blood_frame_1"
+  },
+  "blood_frame_1": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      198,
+      2,
+      390,
+      194
+    ],
+    "to": [
+      198,
+      2,
+      390,
+      194
+    ],
+    "next": "@vm_overlay.blood_frame_2"
+  },
+  "blood_frame_2": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      394,
+      2,
+      586,
+      194
+    ],
+    "to": [
+      394,
+      2,
+      586,
+      194
+    ],
+    "next": "@vm_overlay.blood_frame_3"
+  },
+  "blood_frame_3": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      590,
+      2,
+      782,
+      194
+    ],
+    "to": [
+      590,
+      2,
+      782,
+      194
+    ],
+    "next": "@vm_overlay.blood_frame_4"
+  },
+  "blood_frame_4": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      786,
+      2,
+      978,
+      194
+    ],
+    "to": [
+      786,
+      2,
+      978,
+      194
+    ],
+    "next": "@vm_overlay.blood_frame_5"
+  },
+  "blood_frame_5": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      982,
+      2,
+      1174,
+      194
+    ],
+    "to": [
+      982,
+      2,
+      1174,
+      194
+    ],
+    "next": "@vm_overlay.blood_frame_6"
+  },
+  "blood_frame_6": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1178,
+      2,
+      1370,
+      194
+    ],
+    "to": [
+      1178,
+      2,
+      1370,
+      194
+    ],
+    "next": "@vm_overlay.blood_frame_7"
+  },
+  "blood_frame_7": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1374,
+      2,
+      1566,
+      194
+    ],
+    "to": [
+      1374,
+      2,
+      1566,
+      194
+    ],
+    "next": "@vm_overlay.blood_frame_8"
+  },
+  "blood_frame_8": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      2,
+      198,
+      194,
+      390
+    ],
+    "to": [
+      2,
+      198,
+      194,
+      390
+    ],
+    "next": "@vm_overlay.blood_frame_9"
+  },
+  "blood_frame_9": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      198,
+      198,
+      390,
+      390
+    ],
+    "to": [
+      198,
+      198,
+      390,
+      390
+    ],
+    "next": "@vm_overlay.blood_frame_10"
+  },
+  "blood_frame_10": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      394,
+      198,
+      586,
+      390
+    ],
+    "to": [
+      394,
+      198,
+      586,
+      390
+    ],
+    "next": "@vm_overlay.blood_frame_11"
+  },
+  "blood_frame_11": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      590,
+      198,
+      782,
+      390
+    ],
+    "to": [
+      590,
+      198,
+      782,
+      390
+    ],
+    "next": "@vm_overlay.blood_frame_12"
+  },
+  "blood_frame_12": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      786,
+      198,
+      978,
+      390
+    ],
+    "to": [
+      786,
+      198,
+      978,
+      390
+    ],
+    "next": "@vm_overlay.blood_frame_13"
+  },
+  "blood_frame_13": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      982,
+      198,
+      1174,
+      390
+    ],
+    "to": [
+      982,
+      198,
+      1174,
+      390
+    ],
+    "next": "@vm_overlay.blood_frame_14"
+  },
+  "blood_frame_14": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1178,
+      198,
+      1370,
+      390
+    ],
+    "to": [
+      1178,
+      198,
+      1370,
+      390
+    ],
+    "next": "@vm_overlay.blood_frame_15"
+  },
+  "blood_frame_15": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1374,
+      198,
+      1566,
+      390
+    ],
+    "to": [
+      1374,
+      198,
+      1566,
+      390
+    ],
+    "next": "@vm_overlay.blood_frame_16"
+  },
+  "blood_frame_16": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      2,
+      394,
+      194,
+      586
+    ],
+    "to": [
+      2,
+      394,
+      194,
+      586
+    ],
+    "next": "@vm_overlay.blood_frame_17"
+  },
+  "blood_frame_17": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      198,
+      394,
+      390,
+      586
+    ],
+    "to": [
+      198,
+      394,
+      390,
+      586
+    ],
+    "next": "@vm_overlay.blood_frame_18"
+  },
+  "blood_frame_18": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      394,
+      394,
+      586,
+      586
+    ],
+    "to": [
+      394,
+      394,
+      586,
+      586
+    ],
+    "next": "@vm_overlay.blood_frame_19"
+  },
+  "blood_frame_19": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      590,
+      394,
+      782,
+      586
+    ],
+    "to": [
+      590,
+      394,
+      782,
+      586
+    ],
+    "next": "@vm_overlay.blood_frame_20"
+  },
+  "blood_frame_20": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      786,
+      394,
+      978,
+      586
+    ],
+    "to": [
+      786,
+      394,
+      978,
+      586
+    ],
+    "next": "@vm_overlay.blood_frame_21"
+  },
+  "blood_frame_21": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      982,
+      394,
+      1174,
+      586
+    ],
+    "to": [
+      982,
+      394,
+      1174,
+      586
+    ],
+    "next": "@vm_overlay.blood_frame_22"
+  },
+  "blood_frame_22": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1178,
+      394,
+      1370,
+      586
+    ],
+    "to": [
+      1178,
+      394,
+      1370,
+      586
+    ],
+    "next": "@vm_overlay.blood_frame_23"
+  },
+  "blood_frame_23": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1374,
+      394,
+      1566,
+      586
+    ],
+    "to": [
+      1374,
+      394,
+      1566,
+      586
+    ],
+    "next": "@vm_overlay.blood_frame_24"
+  },
+  "blood_frame_24": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      2,
+      590,
+      194,
+      782
+    ],
+    "to": [
+      2,
+      590,
+      194,
+      782
+    ],
+    "next": "@vm_overlay.blood_frame_25"
+  },
+  "blood_frame_25": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      198,
+      590,
+      390,
+      782
+    ],
+    "to": [
+      198,
+      590,
+      390,
+      782
+    ],
+    "next": "@vm_overlay.blood_frame_26"
+  },
+  "blood_frame_26": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      394,
+      590,
+      586,
+      782
+    ],
+    "to": [
+      394,
+      590,
+      586,
+      782
+    ],
+    "next": "@vm_overlay.blood_frame_27"
+  },
+  "blood_frame_27": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      590,
+      590,
+      782,
+      782
+    ],
+    "to": [
+      590,
+      590,
+      782,
+      782
+    ],
+    "next": "@vm_overlay.blood_frame_28"
+  },
+  "blood_frame_28": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      786,
+      590,
+      978,
+      782
+    ],
+    "to": [
+      786,
+      590,
+      978,
+      782
+    ],
+    "next": "@vm_overlay.blood_frame_29"
+  },
+  "blood_frame_29": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      982,
+      590,
+      1174,
+      782
+    ],
+    "to": [
+      982,
+      590,
+      1174,
+      782
+    ],
+    "next": "@vm_overlay.blood_frame_30"
+  },
+  "blood_frame_30": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1178,
+      590,
+      1370,
+      782
+    ],
+    "to": [
+      1178,
+      590,
+      1370,
+      782
+    ],
+    "next": "@vm_overlay.blood_frame_31"
+  },
+  "blood_frame_31": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1374,
+      590,
+      1566,
+      782
+    ],
+    "to": [
+      1374,
+      590,
+      1566,
+      782
+    ],
+    "next": "@vm_overlay.blood_frame_32"
+  },
+  "blood_frame_32": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      2,
+      786,
+      194,
+      978
+    ],
+    "to": [
+      2,
+      786,
+      194,
+      978
+    ],
+    "next": "@vm_overlay.blood_frame_33"
+  },
+  "blood_frame_33": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      198,
+      786,
+      390,
+      978
+    ],
+    "to": [
+      198,
+      786,
+      390,
+      978
+    ],
+    "next": "@vm_overlay.blood_frame_34"
+  },
+  "blood_frame_34": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      394,
+      786,
+      586,
+      978
+    ],
+    "to": [
+      394,
+      786,
+      586,
+      978
+    ],
+    "next": "@vm_overlay.blood_frame_35"
+  },
+  "blood_frame_35": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      590,
+      786,
+      782,
+      978
+    ],
+    "to": [
+      590,
+      786,
+      782,
+      978
+    ],
+    "next": "@vm_overlay.blood_frame_36"
+  },
+  "blood_frame_36": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      786,
+      786,
+      978,
+      978
+    ],
+    "to": [
+      786,
+      786,
+      978,
+      978
+    ],
+    "next": "@vm_overlay.blood_frame_37"
+  },
+  "blood_frame_37": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      982,
+      786,
+      1174,
+      978
+    ],
+    "to": [
+      982,
+      786,
+      1174,
+      978
+    ],
+    "next": "@vm_overlay.blood_frame_38"
+  },
+  "blood_frame_38": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1178,
+      786,
+      1370,
+      978
+    ],
+    "to": [
+      1178,
+      786,
+      1370,
+      978
+    ],
+    "next": "@vm_overlay.blood_frame_39"
+  },
+  "blood_frame_39": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1374,
+      786,
+      1566,
+      978
+    ],
+    "to": [
+      1374,
+      786,
+      1566,
+      978
+    ],
+    "next": "@vm_overlay.blood_frame_40"
+  },
+  "blood_frame_40": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      2,
+      982,
+      194,
+      1174
+    ],
+    "to": [
+      2,
+      982,
+      194,
+      1174
+    ],
+    "next": "@vm_overlay.blood_frame_41"
+  },
+  "blood_frame_41": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      198,
+      982,
+      390,
+      1174
+    ],
+    "to": [
+      198,
+      982,
+      390,
+      1174
+    ],
+    "next": "@vm_overlay.blood_frame_42"
+  },
+  "blood_frame_42": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      394,
+      982,
+      586,
+      1174
+    ],
+    "to": [
+      394,
+      982,
+      586,
+      1174
+    ],
+    "next": "@vm_overlay.blood_frame_43"
+  },
+  "blood_frame_43": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      590,
+      982,
+      782,
+      1174
+    ],
+    "to": [
+      590,
+      982,
+      782,
+      1174
+    ],
+    "next": "@vm_overlay.blood_frame_44"
+  },
+  "blood_frame_44": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      786,
+      982,
+      978,
+      1174
+    ],
+    "to": [
+      786,
+      982,
+      978,
+      1174
+    ],
+    "next": "@vm_overlay.blood_frame_45"
+  },
+  "blood_frame_45": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      982,
+      982,
+      1174,
+      1174
+    ],
+    "to": [
+      982,
+      982,
+      1174,
+      1174
+    ],
+    "next": "@vm_overlay.blood_frame_46"
+  },
+  "blood_frame_46": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1178,
+      982,
+      1370,
+      1174
+    ],
+    "to": [
+      1178,
+      982,
+      1370,
+      1174
+    ],
+    "next": "@vm_overlay.blood_frame_47"
+  },
+  "blood_frame_47": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1374,
+      982,
+      1566,
+      1174
+    ],
+    "to": [
+      1374,
+      982,
+      1566,
+      1174
+    ],
+    "next": "@vm_overlay.blood_frame_48"
+  },
+  "blood_frame_48": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      2,
+      1178,
+      194,
+      1370
+    ],
+    "to": [
+      2,
+      1178,
+      194,
+      1370
+    ],
+    "next": "@vm_overlay.blood_frame_49"
+  },
+  "blood_frame_49": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      198,
+      1178,
+      390,
+      1370
+    ],
+    "to": [
+      198,
+      1178,
+      390,
+      1370
+    ],
+    "next": "@vm_overlay.blood_frame_50"
+  },
+  "blood_frame_50": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      394,
+      1178,
+      586,
+      1370
+    ],
+    "to": [
+      394,
+      1178,
+      586,
+      1370
+    ],
+    "next": "@vm_overlay.blood_frame_51"
+  },
+  "blood_frame_51": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      590,
+      1178,
+      782,
+      1370
+    ],
+    "to": [
+      590,
+      1178,
+      782,
+      1370
+    ],
+    "next": "@vm_overlay.blood_frame_52"
+  },
+  "blood_frame_52": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      786,
+      1178,
+      978,
+      1370
+    ],
+    "to": [
+      786,
+      1178,
+      978,
+      1370
+    ],
+    "next": "@vm_overlay.blood_frame_53"
+  },
+  "blood_frame_53": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      982,
+      1178,
+      1174,
+      1370
+    ],
+    "to": [
+      982,
+      1178,
+      1174,
+      1370
+    ],
+    "next": "@vm_overlay.blood_frame_54"
+  },
+  "blood_frame_54": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1178,
+      1178,
+      1370,
+      1370
+    ],
+    "to": [
+      1178,
+      1178,
+      1370,
+      1370
+    ],
+    "next": "@vm_overlay.blood_frame_55"
+  },
+  "blood_frame_55": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      1374,
+      1178,
+      1566,
+      1370
+    ],
+    "to": [
+      1374,
+      1178,
+      1566,
+      1370
+    ],
+    "next": "@vm_overlay.blood_frame_56"
+  },
+  "blood_frame_56": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      2,
+      1374,
+      194,
+      1566
+    ],
+    "to": [
+      2,
+      1374,
+      194,
+      1566
+    ],
+    "next": "@vm_overlay.blood_frame_57"
+  },
+  "blood_frame_57": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      198,
+      1374,
+      390,
+      1566
+    ],
+    "to": [
+      198,
+      1374,
+      390,
+      1566
+    ],
+    "next": "@vm_overlay.blood_frame_58"
+  },
+  "blood_frame_58": {
+    "anim_type": "uv",
+    "duration": 0.06666666666666667,
+    "from": [
+      394,
+      1374,
+      586,
+      1566
+    ],
+    "to": [
+      394,
+      1374,
+      586,
+      1566
+    ],
+    "next": "@vm_overlay.blood_frame_59"
+  },
+  "blood_frame_59": {
+    "anim_type": "uv",
+    "duration": 0.4,
+    "from": [
+      590,
+      1374,
+      782,
+      1566
+    ],
+    "to": [
+      590,
+      1374,
+      782,
+      1566
+    ]
+  },
+  "lifetime": {
+    "anim_type": "alpha",
+    "duration": 4.333333333333333,
+    "from": 1,
+    "to": 1,
+    "next": "@vm_overlay.fade_out"
+  },
+  "fade_out": {
+    "anim_type": "alpha",
+    "duration": 1.2,
+    "from": 1,
+    "to": 0,
+    "easing": "out_quad"
+  },
+  "sequence": {
+    "type": "panel",
+    "size": [
+      "92%y",
+      "92%"
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 1000,
+    "alpha": "@vm_overlay.lifetime",
+    "propagate_alpha": true,
+    "disable_anim_fast_forward": true,
+    "controls": [
+      {
+        "continuous_image": {
+          "type": "image",
+          "texture": "textures/ui/voidmoon/blood_moon",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "uv": "@vm_overlay.blood_frame_0",
+          "uv_size": [
+            192,
+            192
+          ],
+          "alpha": 1,
+          "disable_anim_fast_forward": true,
+          "layer": 1000
+        }
+      }
+    ]
+  }
+}

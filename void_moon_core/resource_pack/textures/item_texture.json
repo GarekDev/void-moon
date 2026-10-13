@@ -1,0 +1,27 @@
+{
+  "resource_pack_name": "Void Moon Core RP",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "voidmoon:lunar_star": {
+      "textures": "textures/items/lunar_star"
+    },
+    "voidmoon:void_moon_manager": {
+      "textures": "textures/items/void_moon_manager"
+    },
+    "voidmoon:life_heart": {
+      "textures": "textures/items/life_heart"
+    },
+    "voidmoon:blood_leather_helmet": {
+      "textures": "textures/items/blood_leather_helmet"
+    },
+    "voidmoon:blood_leather_chestplate": {
+      "textures": "textures/items/blood_leather_chestplate"
+    },
+    "voidmoon:blood_leather_leggings": {
+      "textures": "textures/items/blood_leather_leggings"
+    },
+    "voidmoon:blood_leather_boots": {
+      "textures": "textures/items/blood_leather_boots"
+    }
+  }
+}

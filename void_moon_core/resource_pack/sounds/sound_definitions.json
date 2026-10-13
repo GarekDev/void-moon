@@ -1,0 +1,16 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "voidmoon.graveyard": {
+      "category": "ui",
+      "sounds": [
+        {
+          "name": "sounds/voidmoon/graveyard",
+          "stream": false,
+          "is3D": false,
+          "volume": 2.5
+        }
+      ]
+    }
+  }
+}

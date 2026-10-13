@@ -1,0 +1,7 @@
+{
+  "ui_defs": [
+    "ui/vm_overlay.json",
+    "ui/vm_green.json",
+    "ui/vm_yellow.json"
+  ]
+}

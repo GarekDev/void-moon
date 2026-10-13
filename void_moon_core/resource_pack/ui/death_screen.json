@@ -1,0 +1,43 @@
+{
+  "namespace": "death",
+  "vm_lifetime": {
+    "anim_type": "alpha",
+    "duration": 4.33,
+    "from": 1,
+    "to": 1,
+    "next": "@death.vm_fade"
+  },
+  "vm_fade": {
+    "anim_type": "alpha",
+    "duration": 1.2,
+    "from": 1,
+    "to": 0,
+    "easing": "out_quad",
+    "next": "@death.vm_hidden"
+  },
+  "vm_hidden": {
+    "anim_type": "alpha",
+    "duration": 0.01,
+    "from": 0,
+    "to": 0
+  },
+  "death_screen_content": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "vm_death_overlay": {
+            "type": "panel",
+            "size": ["100%", "100%"],
+            "alpha": "@death.vm_lifetime",
+            "propagate_alpha": true,
+            "controls": [
+              { "figure@vm_overlay.sequence": {} }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
