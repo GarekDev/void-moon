@@ -1,0 +1,57 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "voidmoon:charged_zombie",
+      "spawn_category": "monster",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["zombie", "monster", "undead", "charged"]
+      },
+      "minecraft:health": { "value": 20, "max": 20 },
+      "minecraft:attack": { "damage": 3 },
+      "minecraft:movement": { "value": 0.23 },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "can_pass_doors": true,
+        "can_break_doors": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:collision_box": { "width": 0.6, "height": 1.95 },
+      "minecraft:physics": {},
+      "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+      "minecraft:follow_range": { "value": 32, "max": 32 },
+      "minecraft:loot": { "table": "loot_tables/entities/charged_soul.json" },
+      "minecraft:experience_reward": { "on_death": "5" },
+      "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
+      "minecraft:nameable": {},
+      "minecraft:burns_in_daylight": {},
+      "minecraft:behavior.float": { "priority": 0 },
+      "minecraft:behavior.hurt_by_target": { "priority": 1 },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "must_see": true,
+        "entity_types": [
+          {
+            "filters": { "test": "is_family", "subject": "other", "value": "player" },
+            "max_dist": 32
+          }
+        ]
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 3,
+        "speed_multiplier": 1,
+        "track_target": true
+      },
+      "minecraft:behavior.random_stroll": { "priority": 6, "speed_multiplier": 0.8 },
+      "minecraft:behavior.look_at_player": { "priority": 7, "look_distance": 6 },
+      "minecraft:behavior.random_look_around": { "priority": 8 }
+    }
+  }
+}

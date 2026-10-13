@@ -1,0 +1,14 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "voidmoon:quasar_star" },
+    "tags": ["crafting_table"],
+    "unlock": { "context": "AlwaysUnlocked" },
+    "pattern": [" L ", "LNL", " L "],
+    "key": {
+      "L": { "item": "voidmoon:lunar_star" },
+      "N": { "item": "minecraft:nether_star" }
+    },
+    "result": { "item": "voidmoon:quasar_star", "count": 1 }
+  }
+}

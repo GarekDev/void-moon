@@ -1,0 +1,14 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "voidmoon:soul",
+      "menu_category": { "category": "items" }
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": { "textures": { "default": "voidmoon:soul" } },
+      "minecraft:display_name": { "value": "item.voidmoon:soul.name" }
+    }
+  }
+}

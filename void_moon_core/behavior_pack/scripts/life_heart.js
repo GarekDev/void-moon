@@ -1,8 +1,11 @@
 import { EquipmentSlot, system, world } from "@minecraft/server";
 
 const ITEM = "voidmoon:life_heart";
+const RELIC = "voidmoon:life_relic";
 const PROP_COUNT = "voidmoon:life_hearts";
 const PROP_HP = "voidmoon:life_hp";
+const PROP_CURSE = "voidmoon:half_life";
+const PROP_CURED = "voidmoon:half_life_cured";
 const MAX_EXTRA = 18;
 const BASE_HP = 20;
 const recently = new Set();
@@ -25,8 +28,36 @@ function clampCount(n) {
   return v;
 }
 
-function maxHp(count) {
+function fullHp(count) {
   return BASE_HP + clampCount(count) * 2;
+}
+
+export function isCured(player) {
+  try {
+    return player.getDynamicProperty(PROP_CURED) === 1;
+  } catch {
+    return false;
+  }
+}
+
+export function isCursed(player) {
+  if (isCured(player)) return false;
+  try {
+    return player.getDynamicProperty(PROP_CURSE) === 1;
+  } catch {
+    return false;
+  }
+}
+
+function poolHp(count, cursed) {
+  const full = fullHp(count);
+  if (!cursed) return full;
+  return Math.max(2, Math.floor(full / 2));
+}
+
+function maxHp(playerOrCount, maybeCursed) {
+  if (typeof playerOrCount === "number") return poolHp(playerOrCount, !!maybeCursed);
+  return poolHp(getLifeHearts(playerOrCount), isCursed(playerOrCount));
 }
 
 export function getLifeHearts(player) {
@@ -54,7 +85,8 @@ function healthComp(player) {
 }
 
 function fireLifeEvent(player, count) {
-  const id = `voidmoon:life_${clampCount(count)}`;
+  const n = clampCount(count);
+  const id = isCursed(player) ? `voidmoon:curse_${n}` : `voidmoon:life_${n}`;
   if (attempt(() => player.triggerEvent(id))) return true;
   if (attempt(() => player.runCommand(`event entity @s ${id}`))) return true;
   const name = String(player.name || "").replace(/"/g, "");
@@ -66,7 +98,7 @@ function fireLifeEvent(player, count) {
 function setCurrentHp(player, value) {
   const hp = healthComp(player);
   if (!hp) return false;
-  const cap = maxHp(getLifeHearts(player));
+  const cap = maxHp(player);
   const next = Math.max(1, Math.min(cap, value));
   if (typeof hp.setCurrentValue === "function") {
     return attempt(() => hp.setCurrentValue(next));
@@ -83,7 +115,7 @@ function applyLifePool(player, count, currentHp) {
   fireLifeEvent(player, n);
   system.runTimeout(() => {
     const live = findPlayer(id) || player;
-    const target = typeof currentHp === "number" ? currentHp : maxHp(n);
+    const target = typeof currentHp === "number" ? currentHp : maxHp(live);
     setCurrentHp(live, target);
     const hp = healthComp(live);
     if (hp && typeof hp.currentValue === "number") saveHp(live, hp.currentValue);
@@ -101,31 +133,50 @@ function findPlayer(id) {
 export function resetLifeHearts(player) {
   if (!player) return;
   saveCount(player, 0);
-  saveHp(player, BASE_HP);
-  applyLifePool(player, 0, BASE_HP);
+  const cap = poolHp(0, isCursed(player));
+  saveHp(player, cap);
+  applyLifePool(player, 0, cap);
+}
+
+export function markHalfLife(player) {
+  if (!player || isCursed(player) || isCured(player)) return false;
+  attempt(() => player.setDynamicProperty(PROP_CURSE, 1));
+  const n = getLifeHearts(player);
+  const hp = healthComp(player);
+  const current = hp && typeof hp.currentValue === "number" ? hp.currentValue : fullHp(n);
+  applyLifePool(player, n, current);
+  return true;
+}
+
+export function clearHalfLife(player) {
+  if (!player) return;
+  attempt(() => player.setDynamicProperty(PROP_CURSE, 0));
+  attempt(() => player.setDynamicProperty(PROP_CURED, 1));
+  const n = getLifeHearts(player);
+  applyLifePool(player, n, fullHp(n));
 }
 
 export function restoreLifeHearts(player) {
   if (!player) return;
   const n = getLifeHearts(player);
-  if (n <= 0) return;
+  if (n <= 0 && !isCursed(player)) return;
   let stored;
   try {
     stored = player.getDynamicProperty(PROP_HP);
   } catch {
     stored = undefined;
   }
-  const fallback = maxHp(n);
+  const fallback = poolHp(n, isCursed(player));
   const current = typeof stored === "number" && stored > 0 ? stored : fallback;
   applyLifePool(player, n, current);
 }
 
-function consumeOne(player) {
+function consumeOne(player, typeId) {
   try {
     const eq = player.getComponent("minecraft:equippable");
     if (!eq) return false;
     const main = eq.getEquipment(EquipmentSlot.Mainhand);
-    if (!main || main.typeId !== ITEM) return false;
+    if (!main || main.typeId !== typeId) return false;
     if (main.amount <= 1) {
       eq.setEquipment(EquipmentSlot.Mainhand, undefined);
     } else {
@@ -149,7 +200,7 @@ function useHeart(player) {
     player.sendMessage(`§5[Void Moon] §cYa tienes ${MAX_EXTRA} corazones extra (máximo).`);
     return;
   }
-  if (!consumeOne(player)) {
+  if (!consumeOne(player, ITEM)) {
     player.sendMessage("§5[Void Moon] §cNo tienes el Corazón de Vida en la mano.");
     return;
   }
@@ -169,13 +220,30 @@ function onPlayerHurtOrHeal(player, newValue) {
   if (typeof newValue === "number") saveHp(player, newValue);
 }
 
+function useRelic(player) {
+  const id = player.id || player.name;
+  if (recently.has(id)) return;
+  recently.add(id);
+  system.runTimeout(() => recently.delete(id), 8);
+  if (!isCursed(player)) {
+    player.sendMessage("§5[Void Moon] §7Tu vida máxima ya está completa.");
+    return;
+  }
+  if (!consumeOne(player, RELIC)) {
+    player.sendMessage("§5[Void Moon] §cNo tienes la Reliquia de la Vida en la mano.");
+    return;
+  }
+  clearHalfLife(player);
+  player.sendMessage("§5[Void Moon] §aLa Reliquia te devuelve la vida máxima.");
+}
+
 function tickRepair() {
   for (const player of world.getAllPlayers()) {
     const n = getLifeHearts(player);
-    if (n <= 0) continue;
+    if (n <= 0 && !isCursed(player)) continue;
     const hp = healthComp(player);
     if (!hp || typeof hp.effectiveMax !== "number") continue;
-    const want = maxHp(n);
+    const want = maxHp(player);
     const id = player.id || player.name;
     if (Math.abs(hp.effectiveMax - want) > 0.51) {
       const fails = (repairFails.get(id) || 0) + 1;
@@ -191,9 +259,10 @@ function tickRepair() {
 
 export function registerLifeHeart() {
   world.afterEvents.itemUse.subscribe((event) => {
-    if (event.itemStack?.typeId !== ITEM) return;
+    const id = event.itemStack?.typeId;
     const player = event.source;
-    system.run(() => useHeart(player));
+    if (id === ITEM) system.run(() => useHeart(player));
+    else if (id === RELIC) system.run(() => useRelic(player));
   });
 
   try {

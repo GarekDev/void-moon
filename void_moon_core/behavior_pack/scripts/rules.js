@@ -56,8 +56,8 @@ export const THRESHOLDS = [
     day: 3,
     id: "blood_leather",
     title: "§4La luna tiñe la piel",
-    subtitle: "§cZombies de sangre · Arañas rápidas",
-    chat: "§5[Void Moon] §fDía 3 — Zombies con cuero rojo y espada de madera. Arañas: Fuerza I y Velocidad II. Cuidado con el Jinete Lunar.",
+    subtitle: "§cArañas rápidas · Creepers veloces",
+    chat: "§5[Void Moon] §fDía 3 — Arañas: Fuerza I y Velocidad II. Creepers: Velocidad I. El evoker suelta el tótem al 30%.",
   },
   {
     day: 5,
@@ -65,6 +65,13 @@ export const THRESHOLDS = [
     title: "§5Los muertos se inquietan",
     subtitle: "§cHostiles: Fuerza I",
     chat: "§5[Void Moon] §fDía 5 — Los hostiles ganan Fuerza I.",
+  },
+  {
+    day: 6,
+    id: "soul_valley",
+    title: "§bEl valle cobra",
+    subtitle: "§3Media vida · Esqueletos de hierro",
+    chat: "§5[Void Moon] §fDía 6 — Pierdes la mitad de tu vida máxima. Esqueletos de hierro. En el overworld aparecen el Zombie de Alma y el Esqueleto de Alma.",
   },
   {
     day: 10,

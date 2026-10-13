@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "voidmoon:soul_apple",
+      "menu_category": { "category": "equipment" }
+    },
+    "components": {
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": { "textures": { "default": "voidmoon:soul_apple" } },
+      "minecraft:display_name": { "value": "item.voidmoon:soul_apple.name" },
+      "minecraft:use_animation": "eat",
+      "minecraft:use_modifiers": { "use_duration": 1.6, "movement_modifier": 0.35 },
+      "minecraft:food": {
+        "nutrition": 4,
+        "saturation_modifier": 1.2,
+        "can_always_eat": true
+      }
+    }
+  }
+}

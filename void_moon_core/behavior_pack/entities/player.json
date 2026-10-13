@@ -48,10 +48,22 @@
           "max": 20
         }
       },
+      "voidmoon:curse_0": {
+        "minecraft:health": {
+          "value": 10,
+          "max": 10
+        }
+      },
       "voidmoon:life_1": {
         "minecraft:health": {
           "value": 22,
           "max": 22
+        }
+      },
+      "voidmoon:curse_1": {
+        "minecraft:health": {
+          "value": 11,
+          "max": 11
         }
       },
       "voidmoon:life_2": {
@@ -60,10 +72,22 @@
           "max": 24
         }
       },
+      "voidmoon:curse_2": {
+        "minecraft:health": {
+          "value": 12,
+          "max": 12
+        }
+      },
       "voidmoon:life_3": {
         "minecraft:health": {
           "value": 26,
           "max": 26
+        }
+      },
+      "voidmoon:curse_3": {
+        "minecraft:health": {
+          "value": 13,
+          "max": 13
         }
       },
       "voidmoon:life_4": {
@@ -72,10 +96,22 @@
           "max": 28
         }
       },
+      "voidmoon:curse_4": {
+        "minecraft:health": {
+          "value": 14,
+          "max": 14
+        }
+      },
       "voidmoon:life_5": {
         "minecraft:health": {
           "value": 30,
           "max": 30
+        }
+      },
+      "voidmoon:curse_5": {
+        "minecraft:health": {
+          "value": 15,
+          "max": 15
         }
       },
       "voidmoon:life_6": {
@@ -84,10 +120,22 @@
           "max": 32
         }
       },
+      "voidmoon:curse_6": {
+        "minecraft:health": {
+          "value": 16,
+          "max": 16
+        }
+      },
       "voidmoon:life_7": {
         "minecraft:health": {
           "value": 34,
           "max": 34
+        }
+      },
+      "voidmoon:curse_7": {
+        "minecraft:health": {
+          "value": 17,
+          "max": 17
         }
       },
       "voidmoon:life_8": {
@@ -96,10 +144,22 @@
           "max": 36
         }
       },
+      "voidmoon:curse_8": {
+        "minecraft:health": {
+          "value": 18,
+          "max": 18
+        }
+      },
       "voidmoon:life_9": {
         "minecraft:health": {
           "value": 38,
           "max": 38
+        }
+      },
+      "voidmoon:curse_9": {
+        "minecraft:health": {
+          "value": 19,
+          "max": 19
         }
       },
       "voidmoon:life_10": {
@@ -108,10 +168,22 @@
           "max": 40
         }
       },
+      "voidmoon:curse_10": {
+        "minecraft:health": {
+          "value": 20,
+          "max": 20
+        }
+      },
       "voidmoon:life_11": {
         "minecraft:health": {
           "value": 42,
           "max": 42
+        }
+      },
+      "voidmoon:curse_11": {
+        "minecraft:health": {
+          "value": 21,
+          "max": 21
         }
       },
       "voidmoon:life_12": {
@@ -120,10 +192,22 @@
           "max": 44
         }
       },
+      "voidmoon:curse_12": {
+        "minecraft:health": {
+          "value": 22,
+          "max": 22
+        }
+      },
       "voidmoon:life_13": {
         "minecraft:health": {
           "value": 46,
           "max": 46
+        }
+      },
+      "voidmoon:curse_13": {
+        "minecraft:health": {
+          "value": 23,
+          "max": 23
         }
       },
       "voidmoon:life_14": {
@@ -132,10 +216,22 @@
           "max": 48
         }
       },
+      "voidmoon:curse_14": {
+        "minecraft:health": {
+          "value": 24,
+          "max": 24
+        }
+      },
       "voidmoon:life_15": {
         "minecraft:health": {
           "value": 50,
           "max": 50
+        }
+      },
+      "voidmoon:curse_15": {
+        "minecraft:health": {
+          "value": 25,
+          "max": 25
         }
       },
       "voidmoon:life_16": {
@@ -144,16 +240,34 @@
           "max": 52
         }
       },
+      "voidmoon:curse_16": {
+        "minecraft:health": {
+          "value": 26,
+          "max": 26
+        }
+      },
       "voidmoon:life_17": {
         "minecraft:health": {
           "value": 54,
           "max": 54
         }
       },
+      "voidmoon:curse_17": {
+        "minecraft:health": {
+          "value": 27,
+          "max": 27
+        }
+      },
       "voidmoon:life_18": {
         "minecraft:health": {
           "value": 56,
           "max": 56
+        }
+      },
+      "voidmoon:curse_18": {
+        "minecraft:health": {
+          "value": 28,
+          "max": 28
         }
       }
     },
@@ -348,12 +462,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_0"
+          ]
+        }
+      },
+      "voidmoon:curse_0": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_0"
           ]
         }
       },
@@ -378,12 +560,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_1"
+          ]
+        }
+      },
+      "voidmoon:curse_1": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_1"
           ]
         }
       },
@@ -408,12 +658,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_2"
+          ]
+        }
+      },
+      "voidmoon:curse_2": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_2"
           ]
         }
       },
@@ -438,12 +756,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_3"
+          ]
+        }
+      },
+      "voidmoon:curse_3": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_3"
           ]
         }
       },
@@ -468,12 +854,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_4"
+          ]
+        }
+      },
+      "voidmoon:curse_4": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_4"
           ]
         }
       },
@@ -498,12 +952,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_5"
+          ]
+        }
+      },
+      "voidmoon:curse_5": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_5"
           ]
         }
       },
@@ -528,12 +1050,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_6"
+          ]
+        }
+      },
+      "voidmoon:curse_6": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_6"
           ]
         }
       },
@@ -558,12 +1148,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_7"
+          ]
+        }
+      },
+      "voidmoon:curse_7": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_7"
           ]
         }
       },
@@ -588,12 +1246,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_8"
+          ]
+        }
+      },
+      "voidmoon:curse_8": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_8"
           ]
         }
       },
@@ -618,12 +1344,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_9"
+          ]
+        }
+      },
+      "voidmoon:curse_9": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_9"
           ]
         }
       },
@@ -648,12 +1442,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_10"
+          ]
+        }
+      },
+      "voidmoon:curse_10": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_10"
           ]
         }
       },
@@ -678,12 +1540,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_11"
+          ]
+        }
+      },
+      "voidmoon:curse_11": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_11"
           ]
         }
       },
@@ -708,12 +1638,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_12"
+          ]
+        }
+      },
+      "voidmoon:curse_12": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_12"
           ]
         }
       },
@@ -738,12 +1736,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_13"
+          ]
+        }
+      },
+      "voidmoon:curse_13": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_13"
           ]
         }
       },
@@ -768,12 +1834,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_14"
+          ]
+        }
+      },
+      "voidmoon:curse_14": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_14"
           ]
         }
       },
@@ -798,12 +1932,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_15"
+          ]
+        }
+      },
+      "voidmoon:curse_15": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_15"
           ]
         }
       },
@@ -828,12 +2030,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_16"
+          ]
+        }
+      },
+      "voidmoon:curse_16": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_16"
           ]
         }
       },
@@ -858,12 +2128,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_17"
+          ]
+        }
+      },
+      "voidmoon:curse_17": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_17"
           ]
         }
       },
@@ -888,12 +2226,80 @@
             "voidmoon:life_15",
             "voidmoon:life_16",
             "voidmoon:life_17",
-            "voidmoon:life_18"
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
           ]
         },
         "add": {
           "component_groups": [
             "voidmoon:life_18"
+          ]
+        }
+      },
+      "voidmoon:curse_18": {
+        "remove": {
+          "component_groups": [
+            "voidmoon:life_0",
+            "voidmoon:life_1",
+            "voidmoon:life_2",
+            "voidmoon:life_3",
+            "voidmoon:life_4",
+            "voidmoon:life_5",
+            "voidmoon:life_6",
+            "voidmoon:life_7",
+            "voidmoon:life_8",
+            "voidmoon:life_9",
+            "voidmoon:life_10",
+            "voidmoon:life_11",
+            "voidmoon:life_12",
+            "voidmoon:life_13",
+            "voidmoon:life_14",
+            "voidmoon:life_15",
+            "voidmoon:life_16",
+            "voidmoon:life_17",
+            "voidmoon:life_18",
+            "voidmoon:curse_0",
+            "voidmoon:curse_1",
+            "voidmoon:curse_2",
+            "voidmoon:curse_3",
+            "voidmoon:curse_4",
+            "voidmoon:curse_5",
+            "voidmoon:curse_6",
+            "voidmoon:curse_7",
+            "voidmoon:curse_8",
+            "voidmoon:curse_9",
+            "voidmoon:curse_10",
+            "voidmoon:curse_11",
+            "voidmoon:curse_12",
+            "voidmoon:curse_13",
+            "voidmoon:curse_14",
+            "voidmoon:curse_15",
+            "voidmoon:curse_16",
+            "voidmoon:curse_17",
+            "voidmoon:curse_18"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "voidmoon:curse_18"
           ]
         }
       }

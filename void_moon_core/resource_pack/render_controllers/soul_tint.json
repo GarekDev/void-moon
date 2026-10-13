@@ -1,0 +1,11 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.voidmoon.soul_tint": {
+      "geometry": "Geometry.default",
+      "materials": [{ "*": "Material.default" }],
+      "textures": ["Texture.default"],
+      "color": { "r": 0.45, "g": 0.72, "b": 1.0, "a": 1.0 }
+    }
+  }
+}

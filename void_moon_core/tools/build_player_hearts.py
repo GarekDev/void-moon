@@ -171,22 +171,30 @@ def group_name(n: int) -> str:
     return f"voidmoon:life_{n}"
 
 
-def event_name(n: int) -> str:
-    return f"voidmoon:life_{n}"
+def curse_name(n: int) -> str:
+    return f"voidmoon:curse_{n}"
 
 
 def main() -> None:
     data = json.loads(json.dumps(VANILLA))
     groups = data["minecraft:entity"]["component_groups"]
     events = data["minecraft:entity"]["events"]
-    all_life = [group_name(i) for i in range(MAX_EXTRA + 1)]
+    all_groups = [group_name(i) for i in range(MAX_EXTRA + 1)] + [
+        curse_name(i) for i in range(MAX_EXTRA + 1)
+    ]
 
     for n in range(MAX_EXTRA + 1):
         hp = BASE_HP + n * 2
         groups[group_name(n)] = {"minecraft:health": {"value": hp, "max": hp}}
-        events[event_name(n)] = {
-            "remove": {"component_groups": list(all_life)},
+        events[group_name(n)] = {
+            "remove": {"component_groups": list(all_groups)},
             "add": {"component_groups": [group_name(n)]},
+        }
+        cursed = max(2, hp // 2)
+        groups[curse_name(n)] = {"minecraft:health": {"value": cursed, "max": cursed}}
+        events[curse_name(n)] = {
+            "remove": {"component_groups": list(all_groups)},
+            "add": {"component_groups": [curse_name(n)]},
         }
 
     out = (

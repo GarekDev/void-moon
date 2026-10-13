@@ -11,7 +11,9 @@ import { registerManager } from "./manager.js";
 import { registerScreamer } from "./screamer.js";
 import { registerBloodMoon, tickBloodMoon } from "./bloodmoon.js";
 import { onDay3Spawn, tickDay3 } from "./day3.js";
+import { onDay6Spawn, tickDay6 } from "./day6.js";
 import { registerLifeHeart } from "./life_heart.js";
+import { registerSoulApple } from "./soul_apple.js";
 
 registerBoard();
 registerScreamer();
@@ -21,6 +23,7 @@ registerLocks();
 registerLunarStar();
 registerManager();
 registerLifeHeart();
+registerSoulApple();
 registerAdmin();
 
 world.afterEvents.playerSpawn.subscribe((event) => {
@@ -47,6 +50,7 @@ try {
     system.run(() => {
       onHostileSpawn(entity, getEventDay());
       onDay3Spawn(entity, getEventDay());
+      onDay6Spawn(entity, getEventDay());
       applyCustomToEntity(entity);
       scheduleCustomToEntity(entity);
     });
@@ -60,5 +64,6 @@ system.runInterval(() => {
   tickBloodMoon();
   tickMobEscalation(getEventDay());
   tickDay3(getEventDay());
+  tickDay6(getEventDay());
   tickCustomRules();
 }, 20);

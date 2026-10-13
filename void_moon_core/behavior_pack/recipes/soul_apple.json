@@ -1,0 +1,14 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "voidmoon:soul_apple" },
+    "tags": ["crafting_table"],
+    "unlock": { "context": "AlwaysUnlocked" },
+    "pattern": ["SSS", "SGS", "SSS"],
+    "key": {
+      "S": { "item": "voidmoon:soul" },
+      "G": { "item": "minecraft:golden_apple" }
+    },
+    "result": { "item": "voidmoon:soul_apple", "count": 1 }
+  }
+}

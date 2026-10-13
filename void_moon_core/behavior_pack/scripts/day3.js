@@ -1,37 +1,16 @@
 import { system, world } from "@minecraft/server";
 import { isOfficialOn } from "./store.js";
-import { equipLoadout } from "./custom.js";
 
 const NIGHT_START = 12542;
 const NIGHT_END = 23460;
 const EFFECT_TICKS = 20 * 60 * 8;
-const RIDER_INTERVAL = 20 * 90;
+const RIDER_INTERVAL = 20 * 40;
+const RIDER_CAP = 3;
 const RIDER_TAG = "voidmoon_lunar_rider";
-const SKELLY_TAG = "voidmoon_lunar_skelly";
-
-export const ZOMBIE_IDS = new Set([
-  "minecraft:zombie",
-  "minecraft:zombie_villager",
-  "minecraft:zombie_villager_v2",
-  "minecraft:husk",
-]);
 
 export const SPIDER_IDS = new Set(["minecraft:spider", "minecraft:cave_spider"]);
-
-const ZOMBIE_GEAR = {
-  head: "voidmoon:blood_leather_helmet",
-  chest: "voidmoon:blood_leather_chestplate",
-  legs: "voidmoon:blood_leather_leggings",
-  feet: "voidmoon:blood_leather_boots",
-  mainhand: "minecraft:wooden_sword",
-};
-
-const RIDER_GEAR = {
-  head: "voidmoon:blood_leather_helmet",
-  chest: "voidmoon:blood_leather_chestplate",
-  legs: "voidmoon:blood_leather_leggings",
-  feet: "voidmoon:blood_leather_boots",
-};
+const CREEPER_IDS = new Set(["minecraft:creeper"]);
+let riderSeq = 0;
 
 function attempt(fn) {
   try {
@@ -79,9 +58,14 @@ export function applySpiderDay3(entity, day) {
   );
 }
 
-export function applyZombieDay3(entity, day) {
-  if (day < 3 || !entity || !ZOMBIE_IDS.has(entity.typeId)) return;
-  equipLoadout(entity, ZOMBIE_GEAR, "vm_d3_");
+export function applyCreeperDay3(entity, day) {
+  if (day < 3 || !entity || !CREEPER_IDS.has(entity.typeId)) return;
+  attempt(() =>
+    entity.addEffect("speed", EFFECT_TICKS, {
+      amplifier: 0,
+      showParticles: false,
+    })
+  );
 }
 
 export function scheduleDay3(entity, day) {
@@ -90,8 +74,8 @@ export function scheduleDay3(entity, day) {
   for (const t of delays) {
     system.runTimeout(() => {
       if (!valid(entity) || !isOfficialOn()) return;
-      applyZombieDay3(entity, day);
       applySpiderDay3(entity, day);
+      applyCreeperDay3(entity, day);
     }, t);
   }
 }
@@ -122,8 +106,37 @@ function givePowerBow(skeleton) {
   runNear(skeleton, `enchant @s power 2`);
 }
 
-function tameHorse(horse) {
+function groundPos(dim, x, y, z) {
+  const fx = Math.floor(x);
+  const fz = Math.floor(z);
+  const start = Math.min(319, Math.floor(y) + 8);
+  const end = Math.max(-64, Math.floor(y) - 24);
+  for (let gy = start; gy >= end; gy--) {
+    try {
+      const block = dim.getBlock({ x: fx, y: gy, z: fz });
+      const above = dim.getBlock({ x: fx, y: gy + 1, z: fz });
+      if (!block || !above) continue;
+      if (block.isAir || block.isLiquid) continue;
+      if (!above.isAir) continue;
+      return { x: fx + 0.5, y: gy + 1, z: fz + 0.5 };
+    } catch {
+      continue;
+    }
+  }
+  return { x, y, z };
+}
+
+function mountPair(skeleton, horse, pairTag) {
+  if (!valid(skeleton) || !valid(horse)) return;
+  const ride =
+    `ride @e[type=skeleton,tag=${pairTag},c=1] start_riding @e[type=skeleton_horse,tag=${pairTag},c=1] teleport_rider`;
+  runNear(skeleton, ride);
+  runNear(horse, ride);
+}
+
+function tameHorse(horse, pairTag) {
   attempt(() => horse.addTag(RIDER_TAG));
+  attempt(() => horse.addTag(pairTag));
   attempt(() => horse.addTag("Jinete Lunar"));
   attempt(() => {
     horse.nameTag = "§cJinete Lunar";
@@ -135,32 +148,20 @@ function tameHorse(horse) {
   runNear(horse, `replaceitem entity @s slot.saddle 0 saddle 1`);
 }
 
-function dressRider(skeleton, horse) {
-  tameHorse(horse);
-  attempt(() => skeleton.addTag(SKELLY_TAG));
-  equipLoadout(skeleton, RIDER_GEAR, "vm_d3r_");
+function dressRider(skeleton, horse, pairTag) {
+  tameHorse(horse, pairTag);
+  attempt(() => skeleton.addTag(RIDER_TAG));
+  attempt(() => skeleton.addTag(pairTag));
+  attempt(() => {
+    skeleton.nameTag = "§cJinete Lunar";
+  });
   givePowerBow(skeleton);
-  system.runTimeout(() => {
-    if (!valid(skeleton) || !valid(horse)) return;
-    equipLoadout(skeleton, RIDER_GEAR, "vm_d3r_");
-    givePowerBow(skeleton);
-    runNear(
-      skeleton,
-      `ride @e[type=skeleton,tag=${SKELLY_TAG},c=1] start_riding @e[type=skeleton_horse,tag=${RIDER_TAG},c=1] teleport_rider`
-    );
-  }, 8);
-  system.runTimeout(() => {
-    if (valid(skeleton)) {
-      equipLoadout(skeleton, RIDER_GEAR, "vm_d3r_");
-      givePowerBow(skeleton);
-    }
-    if (valid(skeleton) && valid(horse)) {
-      runNear(
-        skeleton,
-        `ride @e[type=skeleton,tag=${SKELLY_TAG},c=1] start_riding @e[type=skeleton_horse,tag=${RIDER_TAG},c=1] teleport_rider`
-      );
-    }
-  }, 25);
+  for (const delay of [2, 8, 16, 25, 40, 60]) {
+    system.runTimeout(() => {
+      if (valid(skeleton)) givePowerBow(skeleton);
+      mountPair(skeleton, horse, pairTag);
+    }, delay);
+  }
 }
 
 function spawnLunarRider(player) {
@@ -168,11 +169,14 @@ function spawnLunarRider(player) {
   const loc = player.location;
   const angle = Math.random() * Math.PI * 2;
   const dist = 16 + Math.random() * 10;
-  const pos = {
+  const raw = {
     x: loc.x + Math.cos(angle) * dist,
     y: loc.y,
     z: loc.z + Math.sin(angle) * dist,
   };
+  const pos = groundPos(dim, raw.x, raw.y, raw.z);
+  riderSeq += 1;
+  const pairTag = `voidmoon_lr_${riderSeq}`;
   let horse;
   let skeleton;
   try {
@@ -182,7 +186,7 @@ function spawnLunarRider(player) {
     return;
   }
   if (!horse || !skeleton) return;
-  dressRider(skeleton, horse);
+  dressRider(skeleton, horse, pairTag);
 }
 
 let riderAge = RIDER_INTERVAL;
@@ -212,7 +216,7 @@ function tickRiders(day) {
           return false;
         }
       });
-      if (riders.length >= 2) continue;
+      if (riders.length >= RIDER_CAP) continue;
     } catch {
       /* spawn anyway */
     }
@@ -234,8 +238,8 @@ export function tickDay3(day) {
       continue;
     }
     for (const entity of entities) {
-      applyZombieDay3(entity, day);
       applySpiderDay3(entity, day);
+      applyCreeperDay3(entity, day);
     }
   }
   tickRiders(day);
@@ -243,7 +247,7 @@ export function tickDay3(day) {
 
 export function onDay3Spawn(entity, day) {
   if (!isOfficialOn() || day < 3) return;
-  applyZombieDay3(entity, day);
   applySpiderDay3(entity, day);
+  applyCreeperDay3(entity, day);
   scheduleDay3(entity, day);
 }

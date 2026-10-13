@@ -1,0 +1,14 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "voidmoon:life_relic" },
+    "tags": ["crafting_table"],
+    "unlock": { "context": "AlwaysUnlocked" },
+    "pattern": ["SSS", "SHS", "SSS"],
+    "key": {
+      "S": { "item": "voidmoon:soul" },
+      "H": { "item": "voidmoon:life_heart" }
+    },
+    "result": { "item": "voidmoon:life_relic", "count": 1 }
+  }
+}

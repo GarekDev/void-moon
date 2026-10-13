@@ -2,14 +2,14 @@ import { EquipmentSlot, system, world } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
 import { getDeadNames, revivePlayer } from "./permadeath.js";
 
-const STAR = "voidmoon:lunar_star";
+const STARS = new Set(["voidmoon:lunar_star", "voidmoon:quasar_star"]);
 
 function consumeOne(player) {
   try {
     const eq = player.getComponent("minecraft:equippable");
     if (!eq) return false;
     const main = eq.getEquipment(EquipmentSlot.Mainhand);
-    if (!main || main.typeId !== STAR) return false;
+    if (!main || !STARS.has(main.typeId)) return false;
     if (main.amount <= 1) {
       eq.setEquipment(EquipmentSlot.Mainhand, undefined);
     } else {
@@ -46,8 +46,8 @@ function openReviveMenu(player) {
   }
 
   const form = new ActionFormData()
-    .title("§5Estrella Lunar")
-    .body("Elige a quién revivir.\nSe consume 1 estrella.");
+    .title("§5Revivir")
+    .body("Elige a quién revivir.\nSe consume la estrella de tu mano.");
   for (const name of dead) {
     form.button(name);
   }
@@ -58,7 +58,7 @@ function openReviveMenu(player) {
       const name = dead[res.selection];
       if (!name) return;
       if (!consumeOne(player)) {
-        player.sendMessage("§5[Void Moon] §cNo tienes la Estrella Lunar en la mano.");
+        player.sendMessage("§5[Void Moon] §cNo tienes la estrella en la mano.");
         return;
       }
       const result = revivePlayer(name);
@@ -67,7 +67,7 @@ function openReviveMenu(player) {
         return;
       }
       world.sendMessage(
-        `§5[Void Moon] §a${player.name} revivió a ${result.name} con una Estrella Lunar.`
+        `§5[Void Moon] §a${player.name} revivió a ${result.name}.`
       );
     })
     .catch(() => {
@@ -79,7 +79,7 @@ function openReviveMenu(player) {
 
 export function registerLunarStar() {
   world.afterEvents.itemUse.subscribe((event) => {
-    if (event.itemStack?.typeId !== STAR) return;
+    if (!STARS.has(event.itemStack?.typeId)) return;
     const player = event.source;
     system.run(() => openReviveMenu(player));
   });

@@ -2,10 +2,11 @@ import { world } from "@minecraft/server";
 import { THRESHOLDS, applyGamerules, latestThreshold } from "./rules.js";
 import { refreshBoardTitle } from "./board.js";
 
-const PROP_START = "voidmoon:startDay";
+const PROP_START_MS = "voidmoon:startMs";
 const PROP_PAUSED = "voidmoon:paused";
 const PROP_PAUSED_DAY = "voidmoon:pausedDay";
 const PROP_ANNOUNCED = "voidmoon:announcedDay";
+const DAY_MS = 86400000;
 
 export function getWorldDay() {
   try {
@@ -23,6 +24,23 @@ function numProp(id, fallback) {
   return typeof value === "number" ? value : fallback;
 }
 
+function localMidnight(ms) {
+  const d = new Date(ms);
+  return new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+}
+
+function calendarIndex(ms) {
+  return Math.floor(localMidnight(ms) / DAY_MS);
+}
+
+function ensureStartMs() {
+  const start = numProp(PROP_START_MS, 0);
+  if (start > 0) return start;
+  const midnight = localMidnight(Date.now());
+  world.setDynamicProperty(PROP_START_MS, midnight);
+  return midnight;
+}
+
 export function isPaused() {
   return world.getDynamicProperty(PROP_PAUSED) === 1;
 }
@@ -31,13 +49,15 @@ export function getEventDay() {
   if (isPaused()) {
     return Math.max(1, numProp(PROP_PAUSED_DAY, 1));
   }
-  const startDay = numProp(PROP_START, 0);
-  return Math.max(1, getWorldDay() - startDay + 1);
+  const start = ensureStartMs();
+  const day = calendarIndex(Date.now()) - calendarIndex(start) + 1;
+  return Math.max(1, day);
 }
 
 export function setEventDay(n) {
   const day = Math.max(1, Math.floor(Number(n) || 1));
-  world.setDynamicProperty(PROP_START, getWorldDay() - day + 1);
+  const start = localMidnight(Date.now()) - (day - 1) * DAY_MS;
+  world.setDynamicProperty(PROP_START_MS, start);
   world.setDynamicProperty(PROP_PAUSED, 0);
   world.setDynamicProperty(PROP_ANNOUNCED, day - 1);
   return day;
@@ -55,7 +75,8 @@ export function pauseClock() {
 export function resumeClock() {
   const pausedDay = numProp(PROP_PAUSED_DAY, getEventDay());
   world.setDynamicProperty(PROP_PAUSED, 0);
-  world.setDynamicProperty(PROP_START, getWorldDay() - pausedDay + 1);
+  const start = localMidnight(Date.now()) - (pausedDay - 1) * DAY_MS;
+  world.setDynamicProperty(PROP_START_MS, start);
   return pausedDay;
 }
 

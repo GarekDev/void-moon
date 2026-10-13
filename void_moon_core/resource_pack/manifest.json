@@ -1,17 +1,17 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Void Moon Core 0.20 RP",
-    "description": "v0.20 — Luna de dificultad más grande, chorro desde arriba",
+    "name": "Void Moon Core 0.24 RP",
+    "description": "v0.24 — Recetas AlwaysUnlocked, Reliquia permanente, Manzana de Alma y Jinete Lunar",
     "uuid": "b5f63262-d378-4b70-b8a1-829a756ed4a3",
-    "version": [0, 20, 0],
+    "version": [0, 24, 0],
     "min_engine_version": [1, 21, 0]
   },
   "modules": [
     {
       "type": "resources",
       "uuid": "609dc0a3-8c12-4b80-a166-e288a540716d",
-      "version": [0, 20, 0]
+      "version": [0, 24, 0]
     }
   ]
 }

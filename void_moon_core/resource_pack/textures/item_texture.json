@@ -22,6 +22,18 @@
     },
     "voidmoon:blood_leather_boots": {
       "textures": "textures/items/blood_leather_boots"
+    },
+    "voidmoon:quasar_star": {
+      "textures": "textures/items/quasar_star"
+    },
+    "voidmoon:soul": {
+      "textures": "textures/items/soul"
+    },
+    "voidmoon:life_relic": {
+      "textures": "textures/items/life_relic"
+    },
+    "voidmoon:soul_apple": {
+      "textures": "textures/items/soul_apple"
     }
   }
 }

@@ -2,7 +2,7 @@
 
 Estas reglas viven en el core (`void_moon_core/behavior_pack/scripts/`). Cambiar umbrales aquí **y** en `scripts/rules.js`.
 
-El reloj usa el día del mundo (`world.getDay()` o `getAbsoluteTime() / 24000`) menos un `startDay` guardado en propiedades dinámicas. Día del evento = 1 el día en que arranca el pack, salvo `/scriptevent voidmoon:setday N`.
+El reloj usa **días reales** (medianoche del equipo que corre el mundo), no días de Minecraft. Día del evento = 1 el día de calendario en que arranca, y sube al pasar la medianoche. `/scriptevent voidmoon:setday N` mueve esa fecha para probar sin esperar. Pausa congela el día; al reanudar no se saltan los días que pasaron.
 
 ## Día 0 / Día 1 — arranque
 
@@ -18,7 +18,7 @@ En cuanto el pack está activo (día de evento ≥ 1):
 | End cerrado | Ojo de ender bloqueado; entrar a `the_end` te devuelve al overworld. |
 | Scoreboard | Sidebar `Void Moon · Día N` + ranking de muertes. |
 
-Revive: **Estrella Lunar** (clic derecho → lista de muertos) o admin `/scriptevent voidmoon:revive Nombre`.
+Revive: **Estrella Lunar** o **Estrella Cuásar** (clic derecho → lista de muertos) o admin `/scriptevent voidmoon:revive Nombre`.
 
 Limitación de Realm: el **dueño** a veces no se puede kickear. El resto de jugadores sí.
 
@@ -34,13 +34,24 @@ bloque de esmeralda  deepslate           bloque de diamante
 
 Clic derecho: formulario con los muertos. Elegir uno consume 1 estrella; esa persona puede volver a entrar.
 
+## Estrella Cuásar (`voidmoon:quasar_star`)
+
+Mismo revive que la Estrella Lunar. Craft:
+
+```
+(vacío)            estrella lunar       (vacío)
+estrella lunar     estrella del nether  estrella lunar
+(vacío)            estrella lunar       (vacío)
+```
+
 ## Umbrales (primera escalada)
 
 | Día | Nombre | Efecto |
 | --- | --- | --- |
 | 1 | La luna vacía | Arranque (tabla de arriba). Anuncio a todos. |
-| 3 | La luna tiñe la piel | Zombies / husk / zombie villager: **cuero rojo** + espada de madera. Arañas y arañas de cueva: **Fuerza I + Velocidad II**. De noche aparece el **Jinete Lunar** (esqueleto con cuero rojo y arco Poder II sobre caballo esqueleto; nametag rojo). |
+| 3 | La luna tiñe la piel | Arañas y arañas de cueva: **Fuerza I + Velocidad II**. Creepers: **Velocidad I**. Evoker: tótem al **30%**. De noche aparece el **Jinete Lunar** (esqueleto con nametag y arco Poder II, siempre montado en caballo esqueleto). |
 | 5 | Los muertos se inquietan | Hostiles (family `monster`) ganan **Fuerza I**. |
+| 6 | El valle cobra | Esqueletos vanilla (no el Jinete): **hierro completo** y arco Poder III, Llama, Empuje I. Cada jugador pierde la **mitad de la vida máxima** (corazones extra incluidos, mínimo 1). En el **overworld de noche** spawnean de forma natural el **Zombie de Alma** y el **Esqueleto de Alma** (modelo, brillo, partículas y animaciones del pack Soul Corrupted). Fuerza I, Velocidad I, **30% Alma**. |
 | 10 | La luna tiene hambre | `doInsomnia` = true. Phantoms extra cerca de jugadores de noche. |
 | 15 | La noche acelera | Hostiles: Fuerza I + **Velocidad I**. |
 | 20 | Los caminantes de ceniza | Hostiles: **Fuerza II** + Velocidad I. Placeholder: aquí entrará `void_moon_mobs`, no un segundo override de `zombie.json`. |
@@ -51,11 +62,17 @@ Los días sin fila propia (2, 4, 6…) solo anuncian “Día N”; las reglas de
 
 No se craftea. Admin: `/give @s voidmoon:life_heart`.
 
-Clic derecho: se consume y **suma 1 corazón extra** a tu vida máxima (acumulativo). 1 → 2 → 3… hasta **18 corazones extra** (28 en total con los 10 vanilla). El corazón nuevo entra lleno. Se vacían y recargan como vida normal (comida/pociones). Al morir (y al revivir) el contador vuelve a 0.
+Clic derecho: se consume y **suma 1 corazón extra** a tu vida máxima (acumulativo). 1 → 2 → 3… hasta **18 corazones extra** (28 en total con los 10 vanilla). El corazón nuevo entra lleno. Se vacían y recargan como vida normal (comida/pociones). Al morir (y al revivir) el contador vuelve a 0. Si la maldición del día 6 está activa, el tope es la mitad.
+
+## Alma, Reliquia y Manzana de Alma
+
+- `voidmoon:soul` — la sueltan el zombie y el esqueleto de alma (30%). **No se craftea.**
+- `voidmoon:life_relic` — 8 almas alrededor de un Corazón de Vida. Clic derecho se consume y **devuelve** la vida máxima de forma permanente (el día 6 no vuelve a cortarla, ni al morir).
+- `voidmoon:soul_apple` — 8 almas alrededor de una manzana de oro. Se come siempre (aunque no tengas hambre). Efectos al terminar: Absorción III (2 min), Regeneración II (15 s), Visión nocturna (4 min), Fuerza I (2 min).
 
 ## Jinete Lunar
 
-No es un mob con textura nueva: esqueleto vanilla + caballo esqueleto vanilla. El caballo lleva nametag `§cJinete Lunar` y tag `Jinete Lunar`. Spawnea de noche a partir del día 3, cerca de jugadores en el overworld.
+No es un mob con ID propio: esqueleto vanilla + caballo esqueleto vanilla. Nametag `§cJinete Lunar`, arco Poder II, **sin armadura**. Spawnea de noche a partir del día 3 en el overworld (~40 s, tope 3 cerca), siempre montado.
 
 ## Admin
 

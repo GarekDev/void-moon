@@ -1,10 +1,9 @@
 {
-  "format_version": "1.20.50",
+  "format_version": "1.21.10",
   "minecraft:recipe_shaped": {
-    "description": {
-      "identifier": "voidmoon:lunar_star"
-    },
+    "description": { "identifier": "voidmoon:lunar_star" },
     "tags": ["crafting_table"],
+    "unlock": { "context": "AlwaysUnlocked" },
     "pattern": ["DBE", "GNG", "EBD"],
     "key": {
       "D": { "item": "minecraft:diamond_block" },
@@ -13,9 +12,6 @@
       "G": { "item": "minecraft:golden_apple" },
       "N": { "item": "minecraft:netherite_ingot" }
     },
-    "result": {
-      "item": "voidmoon:lunar_star",
-      "count": 1
-    }
+    "result": { "item": "voidmoon:lunar_star", "count": 1 }
   }
 }

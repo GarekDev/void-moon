@@ -4,7 +4,7 @@ Evento estilo Permadeath / Dedsafio para un Realm. Namespace: `voidmoon:`.
 
 Carpeta: `C:\Users\Adriotto\Documents\Minecraft\addons\void_moon`
 
-Instalar para probar: doble clic en [`void_moon_core_0.20.mcaddon`](void_moon_core_0.20.mcaddon). Al mejorar el core se sube `header.version` y se regenera el `.mcaddon` con `python void_moon_core/tools/package.py`. Mismos UUIDs; Minecraft lo trata como actualización.
+Instalar para probar: doble clic en [`void_moon_core_0.24.mcaddon`](void_moon_core_0.24.mcaddon). Al mejorar el core se sube `header.version` y se regenera el `.mcaddon` con `python void_moon_core/tools/package.py`. Mismos UUIDs; Minecraft lo trata como actualización.
 
 ## Arquitectura (confirmada)
 
@@ -35,8 +35,8 @@ Script API **estable** `@minecraft/server` `1.16.0` + `@minecraft/server-ui` `1.
 
 ## Cómo probar (mundo local)
 
-1. Doble clic en `void_moon_core_0.20.mcaddon`, o copia `void_moon_core/behavior_pack` y `resource_pack` a las carpetas `development_*`.
-2. Activa **Void Moon Core 0.20** BP + RP en el mundo (cheats ON para `/scriptevent` y `/kick`).
+1. Doble clic en `void_moon_core_0.24.mcaddon`, o copia `void_moon_core/behavior_pack` y `resource_pack` a las carpetas `development_*`.
+2. Activa **Void Moon Core 0.24** BP + RP en el mundo (cheats ON para `/scriptevent` y `/kick`).
 3. Si al entrar no sale el mensaje `[Void Moon] Scripts cargados`, activa **Beta APIs** en experimentos, recarga el mundo y avísame. El resto del pack no pide Holiday Creator ni Hardcore.
 4. En el chat o con comandos:
 
