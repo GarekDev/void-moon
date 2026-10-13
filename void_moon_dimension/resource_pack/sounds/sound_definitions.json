@@ -1,0 +1,25 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "voidmoon.dark_moon_stone.step": {
+      "category": "block",
+      "sounds": [{ "name": "sounds/voidmoon/dark_moon_stone_step", "volume": 1.0, "pitch": 1.0 }]
+    },
+    "voidmoon.dark_moon_stone.hit": {
+      "category": "block",
+      "sounds": [{ "name": "sounds/voidmoon/dark_moon_stone_hit", "volume": 1.0, "pitch": 1.0 }]
+    },
+    "voidmoon.dark_moon_stone.break": {
+      "category": "block",
+      "sounds": [{ "name": "sounds/voidmoon/dark_moon_stone_break", "volume": 1.15, "pitch": 0.95 }]
+    },
+    "voidmoon.dark_moon_stone.place": {
+      "category": "block",
+      "sounds": [{ "name": "sounds/voidmoon/dark_moon_stone_place", "volume": 1.0, "pitch": 1.0 }]
+    },
+    "voidmoon.dark_moon_stone.fall": {
+      "category": "block",
+      "sounds": [{ "name": "sounds/voidmoon/dark_moon_stone_fall", "volume": 1.1, "pitch": 0.9 }]
+    }
+  }
+}

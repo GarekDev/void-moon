@@ -1,0 +1,17 @@
+{
+  "block_sounds": {
+    "dark_moon_stone": {
+      "pitch": 0.68,
+      "volume": 1.0,
+      "events": {
+        "hit": "voidmoon.dark_moon_stone.hit",
+        "step": "voidmoon.dark_moon_stone.step",
+        "break": "voidmoon.dark_moon_stone.break",
+        "place": "voidmoon.dark_moon_stone.place",
+        "fall": "voidmoon.dark_moon_stone.fall",
+        "jump": "voidmoon.dark_moon_stone.step",
+        "land": "voidmoon.dark_moon_stone.fall"
+      }
+    }
+  }
+}

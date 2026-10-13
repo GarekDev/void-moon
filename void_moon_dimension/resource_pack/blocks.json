@@ -1,0 +1,23 @@
+{
+  "format_version": "1.1.0",
+  "voidmoon:dark_moon_stone": {
+    "textures": "voidmoon_dark_moon_stone",
+    "sound": "dark_moon_stone"
+  },
+  "voidmoon:moon_rock": {
+    "textures": "voidmoon_moon_rock",
+    "sound": "stone"
+  },
+  "voidmoon:ferruginous_moon_rock": {
+    "textures": "voidmoon_ferruginous_moon_rock",
+    "sound": "stone"
+  },
+  "voidmoon:meteor_fragment": {
+    "textures": "voidmoon_meteor_fragment",
+    "sound": "stone"
+  },
+  "voidmoon:peridot_ore": {
+    "textures": "voidmoon_peridot_ore",
+    "sound": "stone"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:fog_settings": {
+    "description": {
+      "identifier": "voidmoon:dark_moon_fog"
+    },
+    "distance": {
+      "air": {
+        "fog_color": [5, 5, 13],
+        "fog_start": 150,
+        "fog_end": 220,
+        "render_distance_type": "fixed"
+      },
+      "weather": {
+        "fog_color": [3, 3, 8],
+        "fog_start": 150,
+        "fog_end": 220,
+        "render_distance_type": "fixed"
+      },
+      "water": {
+        "fog_color": [13, 13, 25],
+        "fog_start": 80,
+        "fog_end": 140,
+        "render_distance_type": "fixed"
+      }
+    },
+    "volumetric": {
+      "density": {
+        "air": {
+          "max_density": 0.9,
+          "max_density_height": 80,
+          "zero_density_height": 150,
+          "uniform": false
+        }
+      }
+    }
+  }
+}

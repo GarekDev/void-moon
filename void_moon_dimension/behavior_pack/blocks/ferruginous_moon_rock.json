@@ -1,0 +1,28 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "voidmoon:ferruginous_moon_rock",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.ore"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3.5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 6
+      },
+      "minecraft:map_color": "#8a6a52",
+      "minecraft:loot": "loot_tables/blocks/ferruginous_moon_rock",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "voidmoon_ferruginous_moon_rock",
+          "render_method": "opaque"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "voidmoon:peridot_ore",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.ore"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2.5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 6
+      },
+      "minecraft:light_emission": 1,
+      "minecraft:map_color": "#dfffc1",
+      "minecraft:loot": "loot_tables/blocks/peridot_ore",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "voidmoon_peridot_ore",
+          "render_method": "opaque"
+        }
+      }
+    }
+  }
+}

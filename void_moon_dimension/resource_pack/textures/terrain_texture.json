@@ -1,0 +1,21 @@
+{
+  "resource_pack_name": "void_moon_dimension",
+  "texture_name": "atlas.terrain",
+  "texture_data": {
+    "voidmoon_dark_moon_stone": {
+      "textures": "textures/blocks/dark_moon_stone"
+    },
+    "voidmoon_moon_rock": {
+      "textures": "textures/blocks/moon_rock"
+    },
+    "voidmoon_ferruginous_moon_rock": {
+      "textures": "textures/blocks/ferruginous_moon_rock"
+    },
+    "voidmoon_meteor_fragment": {
+      "textures": "textures/blocks/meteor_fragment"
+    },
+    "voidmoon_peridot_ore": {
+      "textures": "textures/blocks/peridot_ore"
+    }
+  }
+}

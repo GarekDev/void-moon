@@ -1,0 +1,30 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:block": {
+    "description": {
+      "identifier": "voidmoon:dark_moon_stone",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.stone"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2.4
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 6
+      },
+      "minecraft:loot": "loot_tables/blocks/dark_moon_stone",
+      "minecraft:map_color": "#2A2E34",
+      "minecraft:friction": 0.58,
+      "minecraft:light_dampening": 15,
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "voidmoon_dark_moon_stone",
+          "render_method": "opaque"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "voidmoon:moon_lens",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "voidmoon_moon_lens",
+      "minecraft:glint": true,
+      "minecraft:display_name": {
+        "value": "item.voidmoon:moon_lens.name"
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 0.05,
+        "movement_modifier": 1
+      }
+    }
+  }
+}

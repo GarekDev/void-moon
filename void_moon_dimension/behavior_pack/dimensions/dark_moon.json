@@ -1,0 +1,16 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:dimension": {
+    "description": {
+      "identifier": "voidmoon:dark_moon"
+    },
+    "components": {
+      "minecraft:generation": {
+        "generator_type": "void"
+      },
+      "minecraft:default_biome": {
+        "biome": "minecraft:the_end"
+      }
+    }
+  }
+}

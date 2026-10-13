@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "voidmoon:meteor_fragment",
+      "menu_category": {
+        "category": "nature",
+        "group": "itemGroup.name.stone"
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 4.5
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 12
+      },
+      "minecraft:map_color": "#2a2a2e",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "voidmoon_meteor_fragment",
+          "render_method": "opaque"
+        }
+      }
+    }
+  }
+}

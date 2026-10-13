@@ -1,0 +1,9 @@
+{
+  "resource_pack_name": "void_moon_dimension",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "voidmoon_moon_lens": {
+      "textures": "textures/items/moon_lens"
+    }
+  }
+}
