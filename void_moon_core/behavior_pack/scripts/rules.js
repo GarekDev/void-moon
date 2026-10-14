@@ -43,7 +43,7 @@ export const HOSTILE_IDS = new Set([
   "minecraft:zombie_villager",
 ]);
 
-/** First five thresholds. Keep in sync with RULES.md */
+/** Thresholds. Keep in sync with RULES.md and scripts/changelog.js (admin book). */
 export const THRESHOLDS = [
   {
     day: 1,
@@ -57,7 +57,7 @@ export const THRESHOLDS = [
     id: "blood_leather",
     title: "§4La luna tiñe la piel",
     subtitle: "§cArañas rápidas · Creepers veloces",
-    chat: "§5[Void Moon] §fDía 3 — Arañas: Fuerza I y Velocidad II. Creepers: Velocidad I. El evoker suelta el tótem al 30%.",
+    chat: "§5[Void Moon] §fDía 3 — Arañas: Fuerza I y Velocidad II. Creepers: Velocidad I. Evoker: tótem 30%. De noche, Jinete Lunar (arco Poder III).",
   },
   {
     day: 5,
@@ -153,6 +153,14 @@ function effectSpec(day) {
 }
 
 function applyBuffs(entity, spec) {
+  try {
+    const id = entity?.typeId;
+    if (id === "voidmoon:charged_zombie" || id === "voidmoon:charged_skeleton") {
+      return;
+    }
+  } catch {
+    /* ignore */
+  }
   for (const row of spec) {
     try {
       entity.addEffect(row.type, EFFECT_TICKS, {

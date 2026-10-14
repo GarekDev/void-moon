@@ -1,6 +1,6 @@
 # Void Moon — día 0 y primeros umbrales
 
-Estas reglas viven en el core (`void_moon_core/behavior_pack/scripts/`). Cambiar umbrales aquí **y** en `scripts/rules.js`.
+Estas reglas viven en el core (`void_moon_core/behavior_pack/scripts/`). Cambiar umbrales aquí, en `scripts/rules.js` **y** en `scripts/changelog.js` (libro firmado de admin). Cada cambio nuevo se registra también en ese libro.
 
 El reloj usa **días reales** (medianoche del equipo que corre el mundo), no días de Minecraft. Día del evento = 1 el día de calendario en que arranca, y sube al pasar la medianoche. `/scriptevent voidmoon:setday N` mueve esa fecha para probar sin esperar. Pausa congela el día; al reanudar no se saltan los días que pasaron.
 
@@ -49,9 +49,9 @@ estrella lunar     estrella del nether  estrella lunar
 | Día | Nombre | Efecto |
 | --- | --- | --- |
 | 1 | La luna vacía | Arranque (tabla de arriba). Anuncio a todos. |
-| 3 | La luna tiñe la piel | Arañas y arañas de cueva: **Fuerza I + Velocidad II**. Creepers: **Velocidad I**. Evoker: tótem al **30%**. De noche aparece el **Jinete Lunar** (esqueleto con nametag y arco Poder II, siempre montado en caballo esqueleto). |
+| 3 | La luna tiñe la piel | Arañas y arañas de cueva: **Fuerza I + Velocidad II**. Creepers: **Velocidad I**. Evoker: tótem al **30%**. De noche aparece el **Jinete Lunar** (esqueleto con nametag y arco Poder III, siempre montado en caballo esqueleto). |
 | 5 | Los muertos se inquietan | Hostiles (family `monster`) ganan **Fuerza I**. |
-| 6 | El valle cobra | Esqueletos vanilla (no el Jinete): **hierro completo** y arco Poder III, Llama, Empuje I. Cada jugador pierde la **mitad de la vida máxima** (corazones extra incluidos, mínimo 1). En el **overworld de noche** spawnean de forma natural el **Zombie de Alma** y el **Esqueleto de Alma** (modelo, brillo, partículas y animaciones del pack Soul Corrupted). Fuerza I, Velocidad I, **30% Alma**. |
+| 6 | El valle cobra | Esqueletos vanilla (no el Jinete): **hierro completo** y arco Poder III, Llama, Empuje I. Cada jugador pierde la **mitad de la vida máxima** (corazones extra incluidos, mínimo 1). En el **overworld de noche** spawnean de forma natural el **Zombie de Alma** y el **Esqueleto de Alma** (modelo, brillo, partículas y animaciones del pack Soul Corrupted). Fuerza II, Velocidad I, **30% Alma**. |
 | 10 | La luna tiene hambre | `doInsomnia` = true. Phantoms extra cerca de jugadores de noche. |
 | 15 | La noche acelera | Hostiles: Fuerza I + **Velocidad I**. |
 | 20 | Los caminantes de ceniza | Hostiles: **Fuerza II** + Velocidad I. Placeholder: aquí entrará `void_moon_mobs`, no un segundo override de `zombie.json`. |
@@ -62,7 +62,7 @@ Los días sin fila propia (2, 4, 6…) solo anuncian “Día N”; las reglas de
 
 No se craftea. Admin: `/give @s voidmoon:life_heart`.
 
-Clic derecho: se consume y **suma 1 corazón extra** a tu vida máxima (acumulativo). 1 → 2 → 3… hasta **18 corazones extra** (28 en total con los 10 vanilla). El corazón nuevo entra lleno. Se vacían y recargan como vida normal (comida/pociones). Al morir (y al revivir) el contador vuelve a 0. Si la maldición del día 6 está activa, el tope es la mitad.
+Clic derecho: se consume y **suma 1 corazón extra** a tu vida máxima (acumulativo). 1 → 2 → 3… hasta **18 corazones extra** (28 en total con los 10 vanilla). El corazón nuevo entra lleno. Se vacían y recargan como vida normal (comida/pociones). Al morir (y al revivir) el contador vuelve a 0. Con la maldición del día 6 (50% de vida) **sí** se pueden seguir comiendo corazones. Al usar la Reliquia, el contador se recorta a **máximo 18 extras**.
 
 ## Alma, Reliquia y Manzana de Alma
 
@@ -72,7 +72,7 @@ Clic derecho: se consume y **suma 1 corazón extra** a tu vida máxima (acumulat
 
 ## Jinete Lunar
 
-No es un mob con ID propio: esqueleto vanilla + caballo esqueleto vanilla. Nametag `§cJinete Lunar`, arco Poder II, **sin armadura**. Spawnea de noche a partir del día 3 en el overworld (~40 s, tope 3 cerca), siempre montado.
+No es un mob con ID propio: esqueleto vanilla + caballo esqueleto vanilla. Nametag `§cJinete Lunar`, arco Poder III, **sin armadura**. Spawnea de noche a partir del **día 3** en el overworld (~40 s, tope 3 cerca), siempre montado.
 
 ## Admin
 
@@ -88,7 +88,10 @@ No es un mob con ID propio: esqueleto vanilla + caballo esqueleto vanilla. Namet
 /scriptevent voidmoon:preview all
 /scriptevent voidmoon:shift good <mensaje>
 /scriptevent voidmoon:shift bad <mensaje>
+/scriptevent voidmoon:book
 ```
+
+Quien tenga el tag `voidmoon_admin` recibe el ítem `Cambios VM` (`voidmoon:admin_book`) con todos los umbrales desde el día 0. Clic derecho abre las páginas. Si el changelog cambia, se reemplaza. `/scriptevent voidmoon:book` o `!vm book` lo vuelve a dar (y abre la guía).
 
 ## Cambio de dificultad (Manager)
 
@@ -101,7 +104,7 @@ En **Void Moon Manager → Cambio de dificultad**: tipo Bueno o Malo + mensaje d
 
 Secuencia: aparece la luna de golpe → termina el flipbook → entonces el mensaje y el sonido. No cambia umbrales por sí sola; solo anuncia.
 
-Chat (si `chatSend` está en el runtime): `!vm help`, `!vm day`, `!vm setday 12`, …
+Chat (si `chatSend` está en el runtime): `!vm help`, `!vm day`, `!vm setday 12`, `!vm book`, …
 
 Permiso: operador (`commandPermissionLevel` ≥ 1) o tag `voidmoon_admin`. Un command block puede lanzar `/scriptevent` sin jugador.
 

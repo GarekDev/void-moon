@@ -28,6 +28,15 @@ function clampCount(n) {
   return v;
 }
 
+function rawCount(player) {
+  try {
+    const v = Math.floor(Number(player.getDynamicProperty(PROP_COUNT)) || 0);
+    return v < 0 ? 0 : v;
+  } catch {
+    return 0;
+  }
+}
+
 function fullHp(count) {
   return BASE_HP + clampCount(count) * 2;
 }
@@ -61,15 +70,12 @@ function maxHp(playerOrCount, maybeCursed) {
 }
 
 export function getLifeHearts(player) {
-  try {
-    return clampCount(player.getDynamicProperty(PROP_COUNT));
-  } catch {
-    return 0;
-  }
+  return clampCount(rawCount(player));
 }
 
-function saveCount(player, count) {
-  attempt(() => player.setDynamicProperty(PROP_COUNT, clampCount(count)));
+function saveCount(player, count, clamp = true) {
+  const v = clamp ? clampCount(count) : Math.max(0, Math.floor(Number(count) || 0));
+  attempt(() => player.setDynamicProperty(PROP_COUNT, v));
 }
 
 function saveHp(player, hp) {
@@ -107,10 +113,14 @@ function setCurrentHp(player, value) {
 }
 
 function applyLifePool(player, count, currentHp) {
-  const n = clampCount(count);
+  const cursed = isCursed(player);
+  const stored = cursed
+    ? Math.max(0, Math.floor(Number(count) || 0))
+    : clampCount(count);
+  const n = clampCount(stored);
   const id = player.id || player.name;
   applying.add(id);
-  saveCount(player, n);
+  saveCount(player, stored, !cursed);
   attempt(() => player.removeEffect("health_boost"));
   fireLifeEvent(player, n);
   system.runTimeout(() => {
@@ -149,16 +159,19 @@ export function markHalfLife(player) {
 }
 
 export function clearHalfLife(player) {
-  if (!player) return;
+  if (!player) return { clipped: false, n: 0 };
+  const raw = rawCount(player);
+  const n = clampCount(raw);
+  const clipped = raw > MAX_EXTRA;
   attempt(() => player.setDynamicProperty(PROP_CURSE, 0));
   attempt(() => player.setDynamicProperty(PROP_CURED, 1));
-  const n = getLifeHearts(player);
   applyLifePool(player, n, fullHp(n));
+  return { clipped, n };
 }
 
 export function restoreLifeHearts(player) {
   if (!player) return;
-  const n = getLifeHearts(player);
+  const n = isCursed(player) ? rawCount(player) : getLifeHearts(player);
   if (n <= 0 && !isCursed(player)) return;
   let stored;
   try {
@@ -195,8 +208,8 @@ function useHeart(player) {
   recently.add(id);
   system.runTimeout(() => recently.delete(id), 8);
 
-  const have = getLifeHearts(player);
-  if (have >= MAX_EXTRA) {
+  const have = rawCount(player);
+  if (!isCursed(player) && have >= MAX_EXTRA) {
     player.sendMessage(`§5[Void Moon] §cYa tienes ${MAX_EXTRA} corazones extra (máximo).`);
     return;
   }
@@ -209,8 +222,11 @@ function useHeart(player) {
   const current = hp && typeof hp.currentValue === "number" ? hp.currentValue : BASE_HP;
   const next = have + 1;
   applyLifePool(player, next, current + 2);
+  const shown = clampCount(next);
   player.sendMessage(
-    `§cCorazón de Vida (${next}/${MAX_EXTRA}). Un corazón extra más. Se pierde al morir.`
+    isCursed(player)
+      ? `§cCorazón de Vida (${shown}/${MAX_EXTRA} al restaurar). Se pierde al morir.`
+      : `§cCorazón de Vida (${shown}/${MAX_EXTRA}). Un corazón extra más. Se pierde al morir.`
   );
 }
 
@@ -233,13 +249,19 @@ function useRelic(player) {
     player.sendMessage("§5[Void Moon] §cNo tienes la Reliquia de la Vida en la mano.");
     return;
   }
-  clearHalfLife(player);
+  const result = clearHalfLife(player);
+  if (result.clipped) {
+    player.sendMessage(
+      `§5[Void Moon] §aLa Reliquia te devuelve la vida máxima. Tope: ${MAX_EXTRA} corazones extra.`
+    );
+    return;
+  }
   player.sendMessage("§5[Void Moon] §aLa Reliquia te devuelve la vida máxima.");
 }
 
 function tickRepair() {
   for (const player of world.getAllPlayers()) {
-    const n = getLifeHearts(player);
+    const n = isCursed(player) ? rawCount(player) : getLifeHearts(player);
     if (n <= 0 && !isCursed(player)) continue;
     const hp = healthComp(player);
     if (!hp || typeof hp.effectiveMax !== "number") continue;

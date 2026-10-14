@@ -86,7 +86,7 @@ export function applySkeletonDay6(entity, day) {
 function buffCharged(entity) {
   if (!entity || !CHARGED.has(entity.typeId)) return;
   attempt(() =>
-    entity.addEffect("strength", EFFECT_TICKS, { amplifier: 0, showParticles: false })
+    entity.addEffect("strength", EFFECT_TICKS, { amplifier: 1, showParticles: false })
   );
   attempt(() =>
     entity.addEffect("speed", EFFECT_TICKS, { amplifier: 0, showParticles: false })

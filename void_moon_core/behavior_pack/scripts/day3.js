@@ -103,7 +103,7 @@ function givePowerBow(skeleton) {
   for (const cmd of cmds) {
     if (runNear(skeleton, cmd)) break;
   }
-  runNear(skeleton, `enchant @s power 2`);
+  runNear(skeleton, `enchant @s power 3`);
 }
 
 function groundPos(dim, x, y, z) {
