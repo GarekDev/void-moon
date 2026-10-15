@@ -93,6 +93,28 @@ def relic():
     return img
 
 
+def ultimate():
+    img = blank()
+    px = img.load()
+    core = (255, 248, 180, 255)
+    gold = (232, 180, 40, 255)
+    voidc = (70, 20, 110, 255)
+    edge = (20, 8, 40, 255)
+    for y in range(16):
+        for x in range(16):
+            dx = x - 7.5
+            dy = y - 7.5
+            adx = abs(dx)
+            ady = abs(dy)
+            if adx + ady <= 2.2 or (adx < 0.8 and ady <= 7) or (ady < 0.8 and adx <= 7):
+                put(px, x, y, core if adx + ady <= 1.2 else gold)
+            elif (adx < 1.6 and ady <= 6) or (ady < 1.6 and adx <= 6):
+                put(px, x, y, voidc)
+            elif (adx < 2.2 and ady <= 5) or (ady < 2.2 and adx <= 5):
+                put(px, x, y, edge)
+    return img
+
+
 def apple():
     img = blank()
     px = img.load()
@@ -121,6 +143,7 @@ def main():
         ("soul", soul()),
         ("life_relic", relic()),
         ("soul_apple", apple()),
+        ("ultimate_star", ultimate()),
     ):
         path = OUT / f"{name}.png"
         img.save(path)

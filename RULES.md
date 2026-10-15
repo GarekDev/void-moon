@@ -18,9 +18,13 @@ En cuanto el pack está activo (día de evento ≥ 1):
 | End cerrado | Ojo de ender bloqueado; entrar a `the_end` te devuelve al overworld. |
 | Scoreboard | Sidebar `Void Moon · Día N` + ranking de muertes. |
 
-Revive: **Estrella Lunar** o **Estrella Cuásar** (clic derecho → lista de muertos) o admin `/scriptevent voidmoon:revive Nombre`.
+Revive: **Estrella Definitiva** (clic derecho → lista de muertos) o admin `/scriptevent voidmoon:revive Nombre`. La Estrella Lunar y la Estrella Cuásar **ya no reviven**.
 
 Limitación de Realm: el **dueño** a veces no se puede kickear. El resto de jugadores sí.
+
+## Estrella Definitiva (`voidmoon:ultimate_star`)
+
+Único ítem de revive. **No hay receta aún** (irá con ítems de la dimensión). Admin: `/give @s voidmoon:ultimate_star`. Clic derecho: formulario con los muertos. Elegir uno consume 1 estrella.
 
 ## Estrella Lunar (`voidmoon:lunar_star`)
 
@@ -32,11 +36,11 @@ manzana de oro       lingote netherite   manzana de oro
 bloque de esmeralda  deepslate           bloque de diamante
 ```
 
-Clic derecho: formulario con los muertos. Elegir uno consume 1 estrella; esa persona puede volver a entrar.
+Ya **no revive**. Se sigue crafteando:
 
 ## Estrella Cuásar (`voidmoon:quasar_star`)
 
-Mismo revive que la Estrella Lunar. Craft:
+Ya **no revive**. Craft:
 
 ```
 (vacío)            estrella lunar       (vacío)
@@ -52,6 +56,7 @@ estrella lunar     estrella del nether  estrella lunar
 | 3 | La luna tiñe la piel | Arañas y arañas de cueva: **Fuerza I + Velocidad II**. Creepers: **Velocidad I**. Evoker: tótem al **30%**. De noche aparece el **Jinete Lunar** (esqueleto con nametag y arco Poder III, siempre montado en caballo esqueleto). |
 | 5 | Los muertos se inquietan | Hostiles (family `monster`) ganan **Fuerza I**. |
 | 6 | El valle cobra | Esqueletos vanilla (no el Jinete): **hierro completo** y arco Poder III, Llama, Empuje I. Cada jugador pierde la **mitad de la vida máxima** (corazones extra incluidos, mínimo 1). En el **overworld de noche** spawnean de forma natural el **Zombie de Alma** y el **Esqueleto de Alma** (modelo, brillo, partículas y animaciones del pack Soul Corrupted). Fuerza II, Velocidad I, **30% Alma**. |
+| 9 | La tormenta carga | Creepers **eléctricos**. **Jinete de la Muerte** (noche OW: diamante Prot I, calabaza, arco Poder IV + Llama). **Chicken jockey** (zombie bebé diamante, Filo IV, Fuerza I; pollo Vel II + Res IV). Pigmans **sin oro**. Golems **sin hierro**. Ahogo **3×**. Revive pasa a la **Estrella Definitiva**. |
 | 10 | La luna tiene hambre | `doInsomnia` = true. Phantoms extra cerca de jugadores de noche. |
 | 15 | La noche acelera | Hostiles: Fuerza I + **Velocidad I**. |
 | 20 | Los caminantes de ceniza | Hostiles: **Fuerza II** + Velocidad I. Placeholder: aquí entrará `void_moon_mobs`, no un segundo override de `zombie.json`. |
@@ -73,6 +78,10 @@ Clic derecho: se consume y **suma 1 corazón extra** a tu vida máxima (acumulat
 ## Jinete Lunar
 
 No es un mob con ID propio: esqueleto vanilla + caballo esqueleto vanilla. Nametag `§cJinete Lunar`, arco Poder III, **sin armadura**. Spawnea de noche a partir del **día 3** en el overworld (~40 s, tope 3 cerca), siempre montado.
+
+## Jinete de la Muerte
+
+Igual, compuesto: esqueleto + caballo esqueleto. Nametag `§4Jinete de la Muerte`. Calabaza en la cabeza, diamante (pechera/grebas/botas) Protección I, arco Poder IV + Llama. Noche overworld desde el **día 9** (~18 s, tope 5). El día 6 no le pone hierro.
 
 ## Admin
 

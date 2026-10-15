@@ -50,6 +50,14 @@ VANILLA = {
                     }
                 }
             },
+            "voidmoon:fast_drown": {
+                "minecraft:breathable": {
+                    "total_supply": 5,
+                    "suffocate_time": -1,
+                    "inhale_time": 3.75,
+                    "generates_bubbles": False,
+                }
+            },
         },
         "components": {
             "minecraft:experience_reward": {
@@ -161,6 +169,9 @@ VANILLA = {
             },
             "minecraft:remove_raid_trigger": {
                 "remove": {"component_groups": ["minecraft:raid_trigger"]}
+            },
+            "voidmoon:fast_drown": {
+                "add": {"component_groups": ["voidmoon:fast_drown"]}
             },
         },
     },

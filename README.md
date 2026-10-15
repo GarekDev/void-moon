@@ -4,7 +4,7 @@ Evento estilo Permadeath / Dedsafio para un Realm. Namespace: `voidmoon:`.
 
 Carpeta: `C:\Users\Adriotto\Documents\Minecraft\addons\void_moon`
 
-Instalar para probar: doble clic en [`void_moon_core_0.26.mcaddon`](void_moon_core_0.26.mcaddon). Al mejorar el core se sube `header.version` y se regenera el `.mcaddon` con `python void_moon_core/tools/package.py`. Mismos UUIDs; Minecraft lo trata como actualización.
+Instalar para probar: doble clic en [`void_moon_core_0.28.mcaddon`](void_moon_core_0.28.mcaddon). Al mejorar el core se sube `header.version` y se regenera el `.mcaddon` con `python void_moon_core/tools/package.py`. Mismos UUIDs; Minecraft lo trata como actualización.
 
 ## Arquitectura (confirmada)
 
@@ -25,7 +25,7 @@ El core **ya sabe el día 40 el día 1**. Un reloj interno enciende umbrales; no
 
 - Reloj de días y umbrales (ver [RULES.md](RULES.md))
 - Permadeath: al morir, **todos** ven en el HUD una luna llena bañada en sangre (~4 s). Audio `voidmoon.graveyard`. Chat: *La muerte ha comenzado una luna de sangre.* El cielo se pone rojo y queda de noche **un día** (24000 ticks); spawns normales de noche, sin extra de daño. Luego todo vuelve. El muerto queda en espectador y después **kick**.
-- Estrella Lunar (`voidmoon:lunar_star`): craft caro; clic derecho abre la lista de muertos y revive a uno.
+- Estrella Definitiva (`voidmoon:ultimate_star`): clic derecho abre la lista de muertos y revive a uno. Lunar y Cuásar ya no reviven.
 - End cerrado (ojo de ender + anti-dimensión). Más bloqueos en `scripts/locks.js`.
 - Scoreboard lateral: título con el día + TOP muertes.
 - Admin: `/scriptevent` (y `!vm` en el chat si el runtime lo permite)
@@ -35,8 +35,8 @@ Script API **estable** `@minecraft/server` `1.16.0` + `@minecraft/server-ui` `1.
 
 ## Cómo probar (mundo local)
 
-1. Doble clic en `void_moon_core_0.26.mcaddon`, o copia `void_moon_core/behavior_pack` y `resource_pack` a las carpetas `development_*`.
-2. Activa **Void Moon Core 0.26** BP + RP en el mundo (cheats ON para `/scriptevent` y `/kick`).
+1. Doble clic en `void_moon_core_0.28.mcaddon`, o copia `void_moon_core/behavior_pack` y `resource_pack` a las carpetas `development_*`.
+2. Activa **Void Moon Core 0.28** BP + RP en el mundo (cheats ON para `/scriptevent` y `/kick`).
 3. Si al entrar no sale el mensaje `[Void Moon] Scripts cargados`, activa **Beta APIs** en experimentos, recarga el mundo y avísame. El resto del pack no pide Holiday Creator ni Hardcore.
 4. En el chat o con comandos:
 
@@ -46,7 +46,7 @@ Script API **estable** `@minecraft/server` `1.16.0` + `@minecraft/server-ui` `1.
 /scriptevent voidmoon:setday 5
 /scriptevent voidmoon:preview
 /scriptevent voidmoon:bloodmoon
-/give @s voidmoon:lunar_star
+/give @s voidmoon:ultimate_star
 /give @s voidmoon:life_heart
 /scriptevent voidmoon:setday 3
 ```

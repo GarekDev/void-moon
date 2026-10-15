@@ -2,7 +2,8 @@ import { EquipmentSlot, system, world } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
 import { getDeadNames, revivePlayer } from "./permadeath.js";
 
-const STARS = new Set(["voidmoon:lunar_star", "voidmoon:quasar_star"]);
+const STARS = new Set(["voidmoon:ultimate_star"]);
+const RETIRED = new Set(["voidmoon:lunar_star", "voidmoon:quasar_star"]);
 
 function consumeOne(player) {
   try {
@@ -79,8 +80,17 @@ function openReviveMenu(player) {
 
 export function registerLunarStar() {
   world.afterEvents.itemUse.subscribe((event) => {
-    if (!STARS.has(event.itemStack?.typeId)) return;
+    const id = event.itemStack?.typeId;
     const player = event.source;
+    if (RETIRED.has(id)) {
+      system.run(() =>
+        player.sendMessage(
+          "§5[Void Moon] §7Esta estrella ya no revive. Usa la Estrella Definitiva."
+        )
+      );
+      return;
+    }
+    if (!STARS.has(id)) return;
     system.run(() => openReviveMenu(player));
   });
 }

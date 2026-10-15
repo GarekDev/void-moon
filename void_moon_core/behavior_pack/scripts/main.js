@@ -12,6 +12,7 @@ import { registerScreamer } from "./screamer.js";
 import { registerBloodMoon, tickBloodMoon } from "./bloodmoon.js";
 import { onDay3Spawn, tickDay3 } from "./day3.js";
 import { onDay6Spawn, tickDay6 } from "./day6.js";
+import { onDay9Spawn, tickDay9 } from "./day9.js";
 import { registerLifeHeart } from "./life_heart.js";
 import { registerSoulApple } from "./soul_apple.js";
 
@@ -51,6 +52,7 @@ try {
       onHostileSpawn(entity, getEventDay());
       onDay3Spawn(entity, getEventDay());
       onDay6Spawn(entity, getEventDay());
+      onDay9Spawn(entity, getEventDay());
       applyCustomToEntity(entity);
       scheduleCustomToEntity(entity);
     });
@@ -65,5 +67,6 @@ system.runInterval(() => {
   tickMobEscalation(getEventDay());
   tickDay3(getEventDay());
   tickDay6(getEventDay());
+  tickDay9(getEventDay());
   tickCustomRules();
 }, 20);

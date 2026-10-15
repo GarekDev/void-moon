@@ -34,6 +34,9 @@
     },
     "voidmoon:soul_apple": {
       "textures": "textures/items/soul_apple"
+    },
+    "voidmoon:ultimate_star": {
+      "textures": "textures/items/ultimate_star"
     }
   }
 }

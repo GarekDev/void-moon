@@ -41,6 +41,7 @@ const HELP = [
   "§7/scriptevent voidmoon:manager",
   "§7/give @s voidmoon:void_moon_manager",
   "§7/give @s voidmoon:life_heart",
+  "§7/give @s voidmoon:ultimate_star",
   "§8Chat: !vm day | start | setday N | pause | resume | revive Nombre | preview | book",
 ];
 

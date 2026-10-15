@@ -5,6 +5,7 @@ import { isCursed, isCured, markHalfLife } from "./life_heart.js";
 
 const EFFECT_TICKS = 20 * 60 * 8;
 const RIDER_TAG = "voidmoon_lunar_rider";
+const DEATH_TAG = "voidmoon_death_rider";
 const CHARGED = new Set(["voidmoon:charged_zombie", "voidmoon:charged_skeleton"]);
 
 const IRON = {
@@ -61,7 +62,7 @@ function giveDay6Bow(skeleton) {
 
 function isLunarRider(entity) {
   try {
-    return entity.hasTag(RIDER_TAG);
+    return entity.hasTag(RIDER_TAG) || entity.hasTag(DEATH_TAG);
   } catch {
     return false;
   }

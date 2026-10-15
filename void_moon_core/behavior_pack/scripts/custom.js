@@ -177,7 +177,14 @@ export function applyCustomToEntity(entity) {
   if (!isCustomOn() || !entity) return;
   try {
     if (entity.typeId === "minecraft:player") return;
-    if (entity.hasTag("voidmoon_lunar_skelly")) return;
+    if (
+      entity.hasTag("voidmoon_lunar_skelly") ||
+      entity.hasTag("voidmoon_lunar_rider") ||
+      entity.hasTag("voidmoon_death_rider") ||
+      entity.hasTag("voidmoon_chicken_jockey")
+    ) {
+      return;
+    }
   } catch {
     return;
   }

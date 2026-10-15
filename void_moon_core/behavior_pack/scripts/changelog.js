@@ -6,7 +6,7 @@
 export const BOOK_TITLE = "Cambios VM";
 export const BOOK_AUTHOR = "Void Moon";
 export const BOOK_NAMETAG = "§5Cambios Void Moon";
-export const BOOK_REV = 26;
+export const BOOK_REV = 28;
 
 export const BOOK_PAGES = [
   [
@@ -15,7 +15,7 @@ export const BOOK_PAGES = [
     "",
     "Tag voidmoon_admin: te llega este libro.",
     "Clic derecho para leer las paginas.",
-    "Cada umbral o item nuevo se registra TAMBIEN aqui.",
+    "Cada umbral o item nuevo se anota aqui.",
     "",
     "Reloj: dias REALES (medianoche del host), no dias MC.",
     "/scriptevent voidmoon:setday N",
@@ -44,7 +44,7 @@ export const BOOK_PAGES = [
     "Dia 0 / Dia 1 — Items",
     "",
     "- Corazon de Vida: +1 extra, tope 18. Se pierde al morir. Give admin.",
-    "- Estrella Lunar / Cuasar: clic, revive a un muerto.",
+    "- Estrella Definitiva: clic, revive a un muerto. Lunar/Cuasar ya no.",
     "- Manager: custom de mobs, bloqueos, anuncios bueno/malo.",
     "- Recetas always unlocked.",
   ].join("\n"),
@@ -53,7 +53,7 @@ export const BOOK_PAGES = [
     "Dia 0 / Dia 1 — Muerte",
     "",
     "Al caer un jugador se inicia luna de sangre (niebla, noche).",
-    "Revive: Estrella Lunar, Estrella Cuasar o",
+    "Revive: Estrella Definitiva o",
     "/scriptevent voidmoon:revive Nombre",
   ].join("\n"),
 
@@ -85,7 +85,7 @@ export const BOOK_PAGES = [
     "Dia 6 (sigue)",
     "",
     "- Esqueletos vanilla (no el Jinete): hierro completo, arco Poder III + Llama + Empuje I.",
-    "- Overworld: Zombie de Alma y Esqueleto de Alma. Fuerza II, Velocidad I, 30% Alma.",
+    "- Overworld: Zombie/Esqueleto de Alma (spawn bajo). Fuerza II, Velocidad I, 30% Alma.",
     "- Alma no se craftea.",
     "- Manzana de Alma: 8 almas + manzana de oro.",
   ].join("\n"),
@@ -95,6 +95,30 @@ export const BOOK_PAGES = [
     "",
     "Se come aunque no tengas hambre.",
     "Absorcion III (2 min), Regen II (15 s), Vision nocturna (4 min), Fuerza I (2 min).",
+  ].join("\n"),
+
+  [
+    "Dia 9 — La tormenta carga",
+    "",
+    "- Todos los creepers son electricos (charged).",
+    "- Jinete de la Muerte (noche OW, ~18 s, tope 5): diamante Prot I, calabaza, arco Poder IV + Llama.",
+  ].join("\n"),
+
+  [
+    "Dia 9 (sigue)",
+    "",
+    "- Chicken jockey (~18 s, tope 5): zombie bebe diamante, Filo IV, Fuerza I. Pollo Vel II + Res IV.",
+    "- Pigmans: no sueltan oro.",
+    "- Golems de hierro: no sueltan hierro.",
+    "- Ahogarte es 3 veces mas rapido.",
+  ].join("\n"),
+
+  [
+    "Dia 9 — Estrella Definitiva",
+    "",
+    "Unico item de revive (clic derecho). Lunar y Cuasar ya no reviven.",
+    "Receta: items de la dimension (aun no). Give: /give @s voidmoon:ultimate_star",
+    "Admin: /scriptevent voidmoon:revive Nombre sigue.",
   ].join("\n"),
 
   [

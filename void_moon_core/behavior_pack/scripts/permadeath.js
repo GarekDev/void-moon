@@ -148,7 +148,7 @@ function kickIfDead(player) {
     toSpectator(player);
     try {
       player.sendMessage(
-        "§5[Void Moon] §cHas caído. El kick no aplica al host de un mundo local; quédate en espectador hasta una Estrella Lunar."
+        "§5[Void Moon] §cHas caído. El kick no aplica al host de un mundo local; quédate en espectador hasta una Estrella Definitiva."
       );
     } catch {
       /* ignore */

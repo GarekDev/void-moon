@@ -74,6 +74,13 @@ export const THRESHOLDS = [
     chat: "§5[Void Moon] §fDía 6 — Pierdes la mitad de tu vida máxima. Esqueletos de hierro. En el overworld aparecen el Zombie de Alma y el Esqueleto de Alma.",
   },
   {
+    day: 9,
+    id: "charged_storm",
+    title: "§4La tormenta carga",
+    subtitle: "§cCreepers eléctricos · Jinetes",
+    chat: "§5[Void Moon] §fDía 9 — Creepers eléctricos. Jinete de la Muerte. Chicken jockey. Ahogo 3×. Pigmans sin oro. Golems sin hierro. Revive: Estrella Definitiva.",
+  },
+  {
     day: 10,
     id: "hunger",
     title: "§5La luna tiene hambre",
