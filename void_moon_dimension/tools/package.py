@@ -1,4 +1,4 @@
-"""Zip BP+RP into Void Moon Dimension v<version>.mcaddon."""
+"""Zip BP+RP into Void Moon Dimension Mixed v<version>.mcaddon."""
 from __future__ import annotations
 
 import json
@@ -21,7 +21,7 @@ def version_label(ver: list) -> str:
 def main() -> None:
     manifest = json.loads((BP / "manifest.json").read_text(encoding="utf-8"))
     label = version_label(manifest["header"]["version"])
-    out = OUT_DIR / f"Void Moon Dimension v{label}.mcaddon"
+    out = OUT_DIR / f"Void Moon Dimension Mixed v{label}.mcaddon"
     if out.exists():
         out.unlink()
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zf:

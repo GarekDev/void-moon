@@ -1,17 +1,17 @@
-# Void Moon Dimension
+# Void Moon Dimension Mixed
 
-Behavior pack + resource pack de la Luna Oscura (`voidmoon:dark_moon`). Versión actual: **0.9**.
+Behavior pack + resource pack de la Luna Oscura (`voidmoon:dark_moon`). Versión **0.12 Mixed**.
 
-Instalación: doble clic en `../Void Moon Dimension v0.9.mcaddon`, o copia `behavior_pack` y `resource_pack` a `development_*`. Cheats ON para `/scriptevent`.
+- Mapa Moon precargado (piedra/adoquín/andesita → `end_stone`)
+- Launchpad en spawn
+- **Sin** teselas `chunkN` (no más terreno lunar flotante)
+- Cohete (hierro/terracota) y estación de concreto/plantas extraídos de Moon.mcworld, dos copias de cada uno cerca de spawn, sentados en el suelo
+- Ice Castle **solo construcción** (sin piedra/tierra del mapa), en el vacío: **267, 113, 666**
 
-Empaquetar de nuevo tras subir `header.version` en ambos manifiestos:
+Si actualizas desde v0.11, espera *Mapa lunar listo* (persist V6 / castle V2).
+
+Instalación: `../Void Moon Dimension Mixed v0.12.mcaddon`. Cheats ON para `/scriptevent`.
 
 ```
 python tools/package.py
 ```
-
-- Dimensión custom void `voidmoon:dark_moon`
-- El mapa Moon se **precoloca** tal cual (sin gen al caminar, sin tiles rotados)
-- Viaje: `voidmoon:moon_lens` o `/scriptevent voidmoon:dim`
-
-Si actualizas desde v0.8 o anterior, usa un mundo nuevo o espera a *Mapa lunar listo* (v0.9 reescribe el terreno con los ejes NBT corregidos).

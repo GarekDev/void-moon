@@ -34,7 +34,11 @@ def remap_file(src: Path, dst: Path) -> None:
 def main() -> None:
     DST.mkdir(parents=True, exist_ok=True)
     count = 0
-    for src in sorted(SRC.glob("chunk*.mcstructure")):
+    names = list(sorted(SRC.glob("chunk*.mcstructure")))
+    launch = SRC / "launchpad.mcstructure"
+    if launch.exists():
+        names.append(launch)
+    for src in names:
         dst = DST / src.name
         remap_file(src, dst)
         count += 1

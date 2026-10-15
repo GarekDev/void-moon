@@ -11,7 +11,7 @@ system.beforeEvents.startup.subscribe((event) => {
 });
 
 world.afterEvents.worldLoad.subscribe(() => {
-  world.sendMessage("§5[Void Moon Dimension] §7v0.9 cargado. El mapa lunar se precoloca al entrar.");
+  world.sendMessage("§5[Void Moon Dimension] §7v0.12 Mixed. Cohete, estación, castillo en 267 113 666.");
   startGenerator();
 });
 
