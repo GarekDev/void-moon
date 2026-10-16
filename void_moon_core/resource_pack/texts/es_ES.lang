@@ -30,3 +30,5 @@ entity.voidmoon:charged_zombie.name=Zombie de Alma
 entity.voidmoon:charged_skeleton.name=Esqueleto de Alma
 item.spawn_egg.entity.voidmoon:charged_zombie.name=Huevo de Zombie de Alma
 item.spawn_egg.entity.voidmoon:charged_skeleton.name=Huevo de Esqueleto de Alma
+entity.voidmoon:pingui.name=Pingüino
+item.spawn_egg.entity.voidmoon:pingui.name=Huevo de Pingüino

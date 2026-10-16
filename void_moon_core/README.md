@@ -1,8 +1,8 @@
 # Void Moon Core
 
-Behavior pack + resource pack del motor del evento. Versión actual: **0.28**.
+Behavior pack + resource pack del motor del evento. Versión actual: **0.29**.
 
-Instalación: doble clic en `../void_moon_core_0.28.mcaddon`, o copia `behavior_pack` y `resource_pack` a `development_*`. Cheats ON para `/scriptevent` y `/kick`.
+Instalación: doble clic en `../void_moon_core_0.29.mcaddon`, o copia `behavior_pack` y `resource_pack` a `development_*`. Cheats ON para `/scriptevent` y `/kick`.
 
 Admin: `/give @s voidmoon:void_moon_manager` (solo comandos; operador o tag `voidmoon_admin`).
 
@@ -15,7 +15,7 @@ python tools/package.py
 - Reloj de días reales (medianoche), umbrales, camas bloqueadas
 - Kick al morir (no espectador)
 - `voidmoon:ultimate_star` — revive (Lunar/Cuásar ya no)
-- Día 3: arañas Fuerza I / Velocidad II, creepers Velocidad I, tótem al 30%, Jinete Lunar
+- Día 3: arañas Fuerza I / Velocidad II, creepers Velocidad I, tótem al 30%, Jinete Lunar, pingüino (salmón)
 - Día 6: esqueletos de hierro, media vida, Alma, Reliquia, Manzana de Alma, Zombie/Esqueleto de Alma en el overworld
 - Día 9: creepers eléctricos, Jinete de la Muerte, chicken jockey, ahogo 3×, pigmans/golems sin oro/hierro
 - `voidmoon:life_heart` acumulativo (1–18 extra); Reliquia recorta a 18 extras

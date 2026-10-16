@@ -30,3 +30,5 @@ entity.voidmoon:charged_zombie.name=Soul Zombie
 entity.voidmoon:charged_skeleton.name=Soul Skeleton
 item.spawn_egg.entity.voidmoon:charged_zombie.name=Soul Zombie Spawn Egg
 item.spawn_egg.entity.voidmoon:charged_skeleton.name=Soul Skeleton Spawn Egg
+entity.voidmoon:pingui.name=Penguin
+item.spawn_egg.entity.voidmoon:pingui.name=Penguin Spawn Egg

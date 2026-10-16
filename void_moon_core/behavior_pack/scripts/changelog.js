@@ -6,7 +6,7 @@
 export const BOOK_TITLE = "Cambios VM";
 export const BOOK_AUTHOR = "Void Moon";
 export const BOOK_NAMETAG = "§5Cambios Void Moon";
-export const BOOK_REV = 28;
+export const BOOK_REV = 29;
 
 export const BOOK_PAGES = [
   [
@@ -64,6 +64,14 @@ export const BOOK_PAGES = [
     "- Creepers: Velocidad I.",
     "- Evoker: totem al 30%.",
     "- De noche, Jinete Lunar: esqueleto + caballo esqueleto, arco Poder III, cap 3 cerca, ~40 s.",
+  ].join("\n"),
+
+  [
+    "Dia 3 — Pinguino",
+    "",
+    "- Spawnea en hielo/nieve (frozen, ice).",
+    "- Tameo: salmon crudo (varios clics).",
+    "- Domado te sigue. A 8 bloques o menos: Regeneracion I.",
   ].join("\n"),
 
   [

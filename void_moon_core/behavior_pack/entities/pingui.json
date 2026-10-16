@@ -1,0 +1,125 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "voidmoon:pingui",
+      "spawn_category": "creature",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "pingui_adulto": {
+        "minecraft:scale": { "value": 1 },
+        "minecraft:collision_box": { "width": 0.6, "height": 0.9 },
+        "minecraft:breedable": {
+          "require_tame": true,
+          "breed_items": ["salmon"],
+          "breeds_with": {
+            "mate_type": "voidmoon:pingui",
+            "baby_type": "voidmoon:pingui",
+            "breed_event": { "event": "minecraft:entity_born", "target": "baby" }
+          }
+        },
+        "minecraft:behavior.breed": { "priority": 3, "speed_multiplier": 1 }
+      },
+      "pingui_bebe": {
+        "minecraft:is_baby": {},
+        "minecraft:scale": { "value": 0.5 },
+        "minecraft:collision_box": { "width": 0.3, "height": 0.45 },
+        "minecraft:ageable": {
+          "duration": 1200,
+          "feed_items": ["salmon"],
+          "grow_up": { "event": "minecraft:ageable_grow_up", "target": "self" }
+        },
+        "minecraft:behavior.follow_parent": { "priority": 6, "speed_multiplier": 1.1 }
+      },
+      "pingui_salvaje": {
+        "minecraft:tameable": {
+          "probability": 0.33,
+          "tame_items": ["salmon"],
+          "tame_event": { "event": "minecraft:on_tame", "target": "self" }
+        }
+      },
+      "pingui_domado": {
+        "minecraft:is_tamed": {},
+        "minecraft:sittable": {},
+        "minecraft:health": { "value": 20, "max": 20 },
+        "minecraft:healable": {
+          "items": [
+            {
+              "item": "salmon",
+              "heal_amount": 4,
+              "filters": { "test": "is_family", "subject": "other", "value": "player" }
+            }
+          ]
+        },
+        "minecraft:behavior.stay_while_sitting": { "priority": 3 },
+        "minecraft:behavior.follow_owner": {
+          "priority": 5,
+          "speed_multiplier": 1,
+          "start_distance": 10,
+          "stop_distance": 2
+        },
+        "minecraft:behavior.beg": {
+          "priority": 9,
+          "look_distance": 8,
+          "look_time": [2, 4],
+          "items": ["salmon"]
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": { "family": ["pingui", "mob"] },
+      "minecraft:health": { "value": 10, "max": 10 },
+      "minecraft:collision_box": { "width": 0.6, "height": 0.9 },
+      "minecraft:movement": { "value": 0.25 },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "can_swim": true,
+        "can_pass_doors": true,
+        "avoid_water": false
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:physics": {},
+      "minecraft:pushable": { "is_pushable": true, "is_pushable_by_piston": true },
+      "minecraft:nameable": {},
+      "minecraft:loot": { "table": "loot_tables/entities/pingui.json" },
+      "minecraft:leashable": { "soft_distance": 4, "hard_distance": 6, "max_distance": 10 },
+      "minecraft:breathable": { "total_supply": 15, "suffocate_time": 0 },
+      "minecraft:behavior.float": { "priority": 0 },
+      "minecraft:behavior.panic": { "priority": 1, "speed_multiplier": 1.25 },
+      "minecraft:behavior.tempt": { "priority": 4, "speed_multiplier": 1, "items": ["salmon"] },
+      "minecraft:behavior.random_stroll": { "priority": 7, "speed_multiplier": 0.8 },
+      "minecraft:behavior.look_at_player": { "priority": 8, "look_distance": 6, "probability": 0.02 },
+      "minecraft:behavior.random_look_around": { "priority": 9 }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 95,
+            "add": { "component_groups": ["pingui_adulto", "pingui_salvaje"] }
+          },
+          {
+            "weight": 5,
+            "add": { "component_groups": ["pingui_bebe", "pingui_salvaje"] }
+          }
+        ]
+      },
+      "minecraft:entity_born": {
+        "add": { "component_groups": ["pingui_bebe", "pingui_domado"] }
+      },
+      "minecraft:ageable_grow_up": {
+        "remove": { "component_groups": ["pingui_bebe"] },
+        "add": { "component_groups": ["pingui_adulto"] }
+      },
+      "minecraft:on_tame": {
+        "remove": { "component_groups": ["pingui_salvaje"] },
+        "add": { "component_groups": ["pingui_domado"] }
+      }
+    }
+  }
+}

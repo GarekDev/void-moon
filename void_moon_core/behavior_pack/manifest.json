@@ -1,30 +1,30 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Void Moon Core 0.28 BP",
-    "description": "v0.28 — Menos mobs de alma, más Jinete de la Muerte y chicken jockey",
+    "name": "Void Moon Core 0.29 BP",
+    "description": "v0.29 — Pingüino día 3 en nieve, tameo con salmón, Regeneración I",
     "uuid": "838f1ef6-8bfa-4c46-8e30-ffb257585f77",
-    "version": [0, 28, 0],
+    "version": [0, 29, 0],
     "min_engine_version": [1, 21, 0]
   },
   "modules": [
     {
       "type": "data",
       "uuid": "647234fb-3f75-46d2-b7e8-72e6308c9cde",
-      "version": [0, 28, 0]
+      "version": [0, 29, 0]
     },
     {
       "type": "script",
       "language": "javascript",
       "entry": "scripts/main.js",
       "uuid": "f927bf38-f312-497b-a770-a61c27a210c5",
-      "version": [0, 28, 0]
+      "version": [0, 29, 0]
     }
   ],
   "dependencies": [
     {
       "uuid": "b5f63262-d378-4b70-b8a1-829a756ed4a3",
-      "version": [0, 28, 0]
+      "version": [0, 29, 0]
     },
     {
       "module_name": "@minecraft/server",

@@ -13,6 +13,7 @@ import { registerBloodMoon, tickBloodMoon } from "./bloodmoon.js";
 import { onDay3Spawn, tickDay3 } from "./day3.js";
 import { onDay6Spawn, tickDay6 } from "./day6.js";
 import { onDay9Spawn, tickDay9 } from "./day9.js";
+import { onPinguiSpawn, tickPingui } from "./pingui.js";
 import { registerLifeHeart } from "./life_heart.js";
 import { registerSoulApple } from "./soul_apple.js";
 
@@ -53,6 +54,7 @@ try {
       onDay3Spawn(entity, getEventDay());
       onDay6Spawn(entity, getEventDay());
       onDay9Spawn(entity, getEventDay());
+      onPinguiSpawn(entity, getEventDay());
       applyCustomToEntity(entity);
       scheduleCustomToEntity(entity);
     });
@@ -68,5 +70,6 @@ system.runInterval(() => {
   tickDay3(getEventDay());
   tickDay6(getEventDay());
   tickDay9(getEventDay());
+  tickPingui(getEventDay());
   tickCustomRules();
 }, 20);

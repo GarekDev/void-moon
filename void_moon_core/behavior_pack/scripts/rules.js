@@ -57,7 +57,7 @@ export const THRESHOLDS = [
     id: "blood_leather",
     title: "§4La luna tiñe la piel",
     subtitle: "§cArañas rápidas · Creepers veloces",
-    chat: "§5[Void Moon] §fDía 3 — Arañas: Fuerza I y Velocidad II. Creepers: Velocidad I. Evoker: tótem 30%. De noche, Jinete Lunar (arco Poder III).",
+    chat: "§5[Void Moon] §fDía 3 — Arañas: Fuerza I y Velocidad II. Creepers: Velocidad I. Evoker: tótem 30%. Jinete Lunar. Pingüino en nieve (salmón para domar).",
   },
   {
     day: 5,

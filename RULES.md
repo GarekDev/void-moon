@@ -53,7 +53,7 @@ estrella lunar     estrella del nether  estrella lunar
 | Día | Nombre | Efecto |
 | --- | --- | --- |
 | 1 | La luna vacía | Arranque (tabla de arriba). Anuncio a todos. |
-| 3 | La luna tiñe la piel | Arañas y arañas de cueva: **Fuerza I + Velocidad II**. Creepers: **Velocidad I**. Evoker: tótem al **30%**. De noche aparece el **Jinete Lunar** (esqueleto con nametag y arco Poder III, siempre montado en caballo esqueleto). |
+| 3 | La luna tiñe la piel | Arañas y arañas de cueva: **Fuerza I + Velocidad II**. Creepers: **Velocidad I**. Evoker: tótem al **30%**. De noche aparece el **Jinete Lunar** (esqueleto con nametag y arco Poder III, siempre montado en caballo esqueleto). **Pingüino** (`voidmoon:pingui`) en biomas de hielo/nieve. Tameo con **salmón crudo**; al domarlo te sigue y a ≤ 8 bloques da **Regeneración I**. |
 | 5 | Los muertos se inquietan | Hostiles (family `monster`) ganan **Fuerza I**. |
 | 6 | El valle cobra | Esqueletos vanilla (no el Jinete): **hierro completo** y arco Poder III, Llama, Empuje I. Cada jugador pierde la **mitad de la vida máxima** (corazones extra incluidos, mínimo 1). En el **overworld de noche** spawnean de forma natural el **Zombie de Alma** y el **Esqueleto de Alma** (modelo, brillo, partículas y animaciones del pack Soul Corrupted). Fuerza II, Velocidad I, **30% Alma**. |
 | 9 | La tormenta carga | Creepers **eléctricos**. **Jinete de la Muerte** (noche OW: diamante Prot I, calabaza, arco Poder IV + Llama). **Chicken jockey** (zombie bebé diamante, Filo IV, Fuerza I; pollo Vel II + Res IV). Pigmans **sin oro**. Golems **sin hierro**. Ahogo **3×**. Revive pasa a la **Estrella Definitiva**. |
@@ -78,6 +78,10 @@ Clic derecho: se consume y **suma 1 corazón extra** a tu vida máxima (acumulat
 ## Jinete Lunar
 
 No es un mob con ID propio: esqueleto vanilla + caballo esqueleto vanilla. Nametag `§cJinete Lunar`, arco Poder III, **sin armadura**. Spawnea de noche a partir del **día 3** en el overworld (~40 s, tope 3 cerca), siempre montado.
+
+## Pingüino (`voidmoon:pingui`)
+
+Desde el **día 3**, spawn natural en biomas con tag `frozen` o `ice`. **Tameo: salmón crudo** (varios clics, 33% cada uno). Domado te sigue; a 8 bloques o menos te da Regeneración I. Antes del día 3 los salvajes se retiran.
 
 ## Jinete de la Muerte
 

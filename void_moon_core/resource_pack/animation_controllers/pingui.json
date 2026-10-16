@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pingui": {
+			"initial_state": "inactivo",
+			"states": {
+				"inactivo": {
+					"animations": [
+						"inactivo"
+					],
+					"transitions": [
+						{
+							"caminar": "query.ground_speed>0.1"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"caminar": {
+					"animations": [
+						"caminar"
+					],
+					"transitions": [
+						{
+							"inactivo": "query.ground_speed<0.1"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}
